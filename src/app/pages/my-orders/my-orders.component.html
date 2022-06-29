@@ -1,0 +1,235 @@
+<div class="loader loaded">
+    <div id="perspective" class="perspective effect-airbnb modalview mob-container animate">
+        <div class="main-wrapper">
+            <div class="main-content">
+                <div class="modal-header fixed-top">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        <b>My Orders</b>
+                    </h5>
+                    <a href="/home" class="more-btn blackbtn">
+                        <i class="ti-arrow-left"></i>
+                        back to home
+                    </a>
+                </div>
+
+                <div class="checkout-body">
+                    <app-offer-banner *ngIf="!blnLogin"></app-offer-banner>
+                    <div class="app-body single-item p-0 mt-50 form-wrap">
+                        <div class="col-sm-12">
+                            <div class="">
+
+                                <div class="pt-4" *ngIf="!blnLogin">
+                                    <div class="phn-hd">
+                                        <p class="phn-numb text-center">
+                                            Connect your phone number to view your orders.
+                                        </p>
+                                    </div>
+                                    <!-- <div class="phn-input-form px-4">
+                                        <form [formGroup]="frmPhoneNumber">
+                                            <div class="form-group input-group mb-3 mt-3 bg-white d-block">
+                                                <label for="txt" class="label-for" id="validCustomerPhone">Enter
+                                                    Your Phone
+                                                    *</label>
+                                                <input class="form-control style2 form-control-lg numericValue"
+                                                    id="customerPhone" type="text" placeholder="Phone"
+                                                    formControlName="txtPhone"
+                                                    [ngClass]="{ 'is-invalid': submitted && f.txtPhone.errors }" />
+                                                <div *ngIf="submitted && f.txtPhone.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.txtPhone.errors.required">
+                                                        Please Enter Your Phone Number
+                                                    </div>
+                                                    <div *ngIf="f.txtPhone.errors.minlength||
+                                                    f.txtPhone.errors.maxlength||
+                                                    f.txtPhone.errors.pattern">
+                                                        Please Enter A Valid Phone Number
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div> -->
+                                    <div class="phn-input-form px-4">
+                                        <form [formGroup]="frmPhoneNumber">
+                                            <div class="form-group input-group bg-white d-block">
+                                                <label for="txt" class="custom-field one" id="validCustomerPhone">
+                                                    <input class="" id="customerPhone" type="text"
+                                                        formControlName="txtPhone" placeholder="eg: 9145232342"
+                                                        [ngClass]="{ 'is-invalid': submitted && f.txtPhone.errors }" />
+
+                                                    <span class="placeholder">Enter phone number</span>
+
+                                                    <div *ngIf="submitted && f.txtPhone.errors"
+                                                        class="invalid-feedback">
+                                                        <div *ngIf="f.txtPhone.errors.required">
+                                                            Please Enter Your Phone Number
+                                                        </div>
+                                                        <div *ngIf="f.txtPhone.errors.minlength||
+                                                    f.txtPhone.errors.maxlength||
+                                                    f.txtPhone.errors.pattern">
+                                                            Please Enter A Valid Phone Number
+                                                        </div>
+                                                    </div>
+
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="submit-button text-center">
+                                        <button type="submit" class="btn btn-success"
+                                            style="text-transform: capitalize;" (click)="onClickSubmit()">
+                                            Submit
+                                        </button>
+                                    </div>
+                                    <div class="terms_privacy px-2">
+                                        <p class="conditions_policy">
+                                            By continuing, you agree to billmykart <a routerLink="/terms-&-conditions">Terms and Conditions</a>
+                                            and <a href="">Privacy Policy</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="all-Orders pt-4" *ngIf="blnLogin">
+                                    <div class="row">
+                                        <div class="col-sm-6" *ngFor="let product of arrMyOrders">
+                                            <a class="showProductInfo" (click)="onClickOrderDetails(product)">
+                                                <!--  -->
+                                                <div class="item list-item-full  pl-0 pr-0">
+                                                    <figure class="mb-0">
+                                                        <img class="myorder-img"
+                                                            [src]="product?.objItem?.strImagUrl[0]?.imageUrl"
+                                                            (error)="errorImage($event)">
+                                                    </figure>
+                                                    <div class="content-div"></div>
+                                                    <div class="bg-price price">
+                                                        <!-- AED -->
+                                                        <span>
+                                                            <!-- <del class="red-color">
+                                                                    50
+                                                                </del> -->
+                                                            AED
+                                                            {{product?.intGrandTotal?.toFixed(2)}}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <h4 class="">
+                                                    {{product?.objItem?.strProductName}}
+                                                </h4>
+                                                <h6 class="mb-0">
+                                                    {{product?.strOrderID}}
+                                                </h6>
+                                                <p class="product-def_pdef m-0 text-{{
+                                                        product?.strOrderStatus === 'CANCELLED' ? 'danger' : 'success'
+                                                      }} ">
+                                                    <i class="fa fa-circle" aria-hidden="true"></i>
+                                                    {{product?.strOrderStatus}}
+                                                </p>
+                                            </a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recommended-items" *ngIf="blnLogin">
+                                    <div class="recommend">
+                                        <p class="recommend-head">Recommended for you</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <ngx-slick-carousel class="no-arrow" #slickModal="slick-carousel"
+                                                [config]="recommendedItemsConfig">
+                                                <div ngxSlickItem class="p-2 text-center gradient"
+                                                    *ngFor="let item of arrRecommendedItems">
+                                                    <a class="recommendedProductInfo" (click)="onClickProductDetails(item)">
+                                                        <!--  -->
+                                                        <div class="recommeneteditem recommended-item-full  pl-0 pr-0">
+                                                            <figure class="mb-0">
+                                                                <img class="recommended-img"
+                                                                    [src]="item?.arrayThumbnail[0]?.imageUrl"
+                                                                    (error)="errorImage($event)">
+                                                            </figure>
+                                                            <div class="content-div"></div>
+                                                            <div class="bg-price price">
+                                                                <!-- AED -->
+                                                                <span>
+                                                                    <!-- <del class="red-color">
+                                                                            50
+                                                                        </del> -->
+                                                                    AED
+                                                                    {{item?.intSellingPrice.toFixed(2)}}
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </a>
+                                                    <h4 class="recommended-product">
+                                                        {{item?.strProductName}}
+                                                    </h4>
+                                                </div>
+                                            </ngx-slick-carousel>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center no-item" *ngIf="blnEmptyOrders && blnLogin">
+                                    <i class="ti-face-sad"></i>
+                                    <br>
+                                    No Item Found
+                                </div>
+
+                            </div>
+                            <ngx-spinner bdColor="rgba(213,208,208,0.8)" size="medium" color="#fff"></ngx-spinner>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navigation style7 style1">
+                <div class="container pl-0 pr-0">
+                    <div class="nav-content">
+                        <ul>
+                            <li>
+                                <a routerLink="/categories" class="nav-content-bttn  allCat">
+                                    <i class="ti-view-list"></i>
+                                    Categories
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink="/best-deals" class="nav-content-bttn">
+                                    <i class="ti-gift"></i>
+                                    Best Deals
+                                </a>
+                            </li>
+                            <li class="">
+                                <a routerLink="/home" class="cart-count mt-1 nav-content-bttn nav-center showCartInfo">
+                                    <i class="ti-home"></i>
+                                </a>
+                            </li>
+
+                            <li class="my-order-list">
+                                <a routerLink="/my-orders" class=" nav-content-bttn active">
+                                    <i class="ti-bag active"></i>
+                                    My Orders
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://api.whatsapp.com/send?phone=918589049648" class="nav-content-bttn"
+                                    data-tab="favorites">
+                                    <i class="fa fa-whatsapp "></i>
+                                    Whatsapp
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div id="desktop-view">
+        <div class="container" style="flex-direction: column;">
+            <div class="divider" style="border-color: rgb(74, 65, 42);"></div>
+            <div style="text-align: right; margin-right :30px">
+                <img src="assets/images/Retro-Logo.png" width="250">
+            </div>
+        </div>
+    </div>
+</div>

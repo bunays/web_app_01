@@ -1,0 +1,59 @@
+<div id="all_cat_title" class="item-header fw-600 text-black mt-0 mb-0" style="display: block;">
+    <h4 class=" ">
+        Best Deals
+    </h4>
+    <a href="/home" class="more-btn cat_link_menu  ">
+        <i class="ti-arrow-left"></i>
+        All Items
+    </a>
+</div>
+<div class="all-best-deals">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="tab-content profile-tab" id="myTabContent">
+                <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                    <!-- <app-subcategory-list></app-subcategory-list> -->
+                    <div class="all-items">
+                        <div class="row">
+                            <div class="col-sm-6" *ngFor="let best of arrayOfBestDeals">
+                                <a class="showProductInfo" (click)="onClickNavigate(best)">
+                                    <div class="item list-item-full  pl-0 pr-0">
+                                        <figure class="mb-0"><img [src]="best?.arrayThumbnail[0]?.imageUrl" (error)="errorImage($event)"></figure>
+                                        <!-- product?.arrayThumbnail[0]?.imageUrl -->
+                                        <div class="content-div"></div>
+                                        <div class="bg-price price">
+                                            <!-- AED -->
+                                            <span>
+                                                
+                                                AED
+                                                {{best?.intSellingPrice}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <h4 class="">
+                                    
+                                    {{best?.strProductName}}
+                                </h4>
+                                <del class="strike-color" *ngIf="best?.intMRP > best?.intSellingPrice">
+                                    <!-- *ngIf="best?.intMRP > best?.intSellingPrice" -->
+                                    AED
+                                    {{best?.intMRP}} 
+                                </del>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="text-center no-item" *ngIf="!arrSubCategory.length || !arrSubCategoryProducts.length">
+                        <i class="ti-face-sad"></i>
+                        <br>
+                        No Item Found
+                        <br>
+                        With This Specification!
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-spinner bdColor="rgba(213,208,208,0.8)" size="medium" color="#fff"></ngx-spinner>
+

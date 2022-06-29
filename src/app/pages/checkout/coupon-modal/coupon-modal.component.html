@@ -1,0 +1,37 @@
+
+<div class="d-block b-no pb-2">
+    <h5 mat-dialog-title class="modal-title fw-600">
+        <b>
+            <i class="ti-gift mr-2 bigi "></i>
+            Coupon / Promo Codes
+        </b>
+    </h5>
+</div>
+<div mat-dialog-content class="modal-body d-block text-left pb-4">
+    <mat-form-field appearance="fill">
+        <form id="couponForm" method="post" action="#" role="form">
+            <div id="couponFormItems">
+                <div class="form-group input-group mb-3 mt-3 ">
+                    <h6>Dou You Have <strong>A Promo / Coupon Code ?</strong> If, Yes Please enter below or click
+                        on<strong> skip button</strong> to proceed.</h6>
+
+                    <span id="validCustomerCoupon">&nbsp;</span><br>
+                    <input class="form-control form-control-lg" name="coupon" id="customerCoupon"
+                        placeholder="Coupon Code" type="text">
+                    <div class="help-block with-errors w100"></div>
+                </div>
+
+                <div class="form-group text-center mb-2">
+                    <button class="btn btn-primary btn w100 btn-primary btn-md" value="Submit" type="button"
+                        id="checkCoupon">Validate Coupon <i class="ti-wand"></i></button>
+                </div>
+            </div>
+
+            <div id="couponResult"></div>
+        </form>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions class="modal-footer b-no text-center d-block mt-2">
+    <a class=" btn text-white bg-primary btn-lg btn-text-secondary" (click)="onNoClick()">Back</a>
+    <a routerLink="/order-summary" class="confirmOrder btn btn-outline-primary btn-lg btn-text-primary ml-2" >Skip  </a>
+</div>

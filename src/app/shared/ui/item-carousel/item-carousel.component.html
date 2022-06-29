@@ -1,0 +1,15 @@
+<ngx-slick-carousel class="no-arrow" #slickModal="slick-carousel" [config]="bannerSlideConfig">
+    <div ngxSlickItem class="p-2 text-center gradient" *ngFor="let bottomBanImg of arrCategories">
+        <div class="sliding-logo-block pointer text-center" >
+            <!-- (click)="onClickShop(image)" -->
+            <a (click)="onClickCategory(bottomBanImg)">
+                <img class="mx-auto slideImg" [src]="bottomBanImg?.strImageUrl"  (error)="errorImage($event)">
+                <!-- bottomBanImg?.strImageUrl -->
+                <p class="sub-cat-item">
+                    {{bottomBanImg?.strName}}
+                    <!-- All Items -->
+                </p>
+            </a>
+        </div>
+    </div>
+</ngx-slick-carousel>

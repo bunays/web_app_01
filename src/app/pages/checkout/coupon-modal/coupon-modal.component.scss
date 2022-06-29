@@ -1,0 +1,80 @@
+
+.fw-600 {
+  font-weight: 600 !important;
+}
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+.bigi {
+  font-size: 30px !important;
+}
+h5 {
+  font-size: 17px;
+}
+::ng-deep .mat-dialog-container {
+  border-radius: 10px;
+}
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+h6 {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 10px;
+}
+.w100 {
+  width: 100%;
+  max-width: 300px;
+}
+.btn {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 8px 20px;
+}
+.modal-footer {
+  border-top: 1px #ddd solid;
+  padding: 0;
+}
+.modal-footer {
+  // display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  // padding: 0.75rem;
+  // border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+}
+.modal-footer .text-white {
+  color: #444 !important;
+}
+.modal-footer a {
+  width: 50%;
+  margin: 0 !important;
+  float: left;
+  background-color: transparent !important;
+  border: 0 !important;
+  font-size: 16px;
+  font-weight: 500;
+}
+.modal-footer .btn-outline-primary {
+  border-left: 1px #ddd solid !important;
+  border-radius: 0;
+}
+a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+strong {
+    color: black;
+}

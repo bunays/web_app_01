@@ -1,0 +1,82 @@
+<!-- <div class="main-wrapper">
+    <nav class="navigation style7 style1">
+        <div class="container pl-0 pr-0">
+            <div class="nav-content">
+                <ul>
+                    <li>
+                        <a href="0" class="nav-content-bttn  allCat">
+                            <i class="ti-view-grid"></i>
+                            Categories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+971 56 348 0466" class="nav-content-bttn">
+                            <i class="ti-mobile"></i>
+                            Call
+                        </a>
+                    </li>
+                    <li class="shopping-cart">
+                        <a href="#" class=" cart-count mt-1 nav-content-bttn nav-center showCartInfo">
+                            <i class="ti-shopping-cart-full"></i>
+                            <span id="cartStat">2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=918589049648" class="nav-content-bttn"
+                            data-tab="favorites">
+                            <i class="fa fa-whatsapp "></i>
+                            Whatsapp
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/maps?q=Ras+Al+khor+3+Dubai+U.A.E&amp;rlz=1C1RXQR_enIN928IN928&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ved=2ahUKEwiN8I3--ovvAhWTILcAHbiTDmEQ_AUoAXoECAUQAw"
+                            class=" nav-content-bttn">
+                            <i class="ti-location-pin"></i>
+                            Location
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div> -->
+<footer class="navigation style7 style1">
+    <div class="container pl-0 pr-0">
+        <div class="nav-content">
+            <ul>
+                <li>
+                    <a routerLink="/categories" class="nav-content-bttn  allCat" (click)="onClick(1)"   [ngClass]="{'active': tab==='tab1'}">
+                        <i class="ti-view-list"></i>
+                        Categories
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/best-deals" class="nav-content-bttn" (click)="onClick(2)"   [ngClass]="{'active': tab==='tab2'}">
+                        <i class="ti-gift"></i>
+                        Best Deals
+                    </a>
+                </li>
+                <li class="shopping-cart">
+                    <a routerLink="/home"
+                        class="cart-count mt-1 nav-content-bttn nav-center showCartInfo" (click)="onClick(3)"   [ngClass]="{'active': tab==='tab3'}">
+                        <i class="ti-home"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/my-orders" class=" nav-content-bttn" (click)="onClick(4)"   [ngClass]="{'active': tab==='tab4'}">
+                        <i class="ti-bag"></i>
+                        My Orders
+                    </a>
+                </li>
+                <li>
+                    <a href="https://api.whatsapp.com/send?phone=918589049648" class="nav-content-bttn"
+                        data-tab="favorites" (click)="onClick(5)"   [ngClass]="{'active': tab==='tab5'}">
+                        <i class="fa fa-whatsapp "></i>
+                        Whatsapp
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>

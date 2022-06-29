@@ -1,0 +1,71 @@
+.bg-cover {
+  background-size: cover;
+}
+.bg-white {
+  background-color: #fff !important;
+}
+h2,
+.h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+.vertical-form {
+  height: 100vh;
+  max-width: 340px;
+}
+.vertical-form .card {
+  border: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.bg-tranparent {
+  background: transparent !important;
+}
+#btn-scan-qr img {
+  /* height: 10em; */
+  padding: 15px;
+  margin: 15px;
+  background: none;
+}
+#qr-canvas {
+  margin: auto;
+  width: calc(100% - 20px);
+  max-width: 400px;
+}
+#qr-result {
+  font-size: 1.2em;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 700px;
+  background-color: white;
+}
+.vertical-form .btn.btn-lg,
+.vertical-form .btn-group-lg > .btn {
+  padding: 16px 0px;
+  border-radius: 10px;
+}
+.btn {
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: capitalize;
+  // padding: 8px 20px;
+}
+.btn i {
+  width: auto !important;
+  background-color: transparent !important;
+  height: auto !important;
+  line-height: 1 !important;
+  position: relative;
+  top: 2px;
+}
+.bg-blue {
+  background-color: #1e32fa;
+}
+.w100 {
+  width: 100%;
+  max-width: 300px;
+}

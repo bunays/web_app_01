@@ -1,0 +1,24 @@
+<svg id="Rect_Light" data-name="Rect Light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="307" viewBox="0 0 1920 307">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.611" y1="1" x2="0.614" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e3fce3"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="1" x2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#c1e7c1"/>
+      <stop offset="0.66" stop-color="#c1e7c1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="1" x2="0" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <path id="Path_2622" data-name="Path 2622" d="M0,0H1920V307H0Z" fill="url(#linear-gradient)"/>
+  <path id="Path_2612" data-name="Path 2612" d="M49,307,499,0H742L292,307Z" opacity="0.33" fill="url(#linear-gradient-2)"/>
+  <path id="Path_2613" data-name="Path 2613" d="M335.8,307,785.8,0h454.5l-450,307Z" opacity="0.33" fill="url(#linear-gradient-2)"/>
+  <path id="Path_2614" data-name="Path 2614" d="M675.6,307l450-307h246l-450,307Z" opacity="0.33" fill="url(#linear-gradient-2)"/>
+  <path id="Path_2615" data-name="Path 2615" d="M953.4,307l450-307h406.5l-450,307Z" opacity="0.33" fill="url(#linear-gradient-2)"/>
+  <path id="Path_2616" data-name="Path 2616" d="M1886,307,1436,0H1079l450,307Z" opacity="0.33" fill="url(#linear-gradient-6)"/>
+  <path id="Path_2617" data-name="Path 2617" d="M1601.2,307,1151.2,0H762.7l450,307Z" opacity="0.33" fill="url(#linear-gradient-6)"/>
+  <path id="Path_2618" data-name="Path 2618" d="M1238.4,307,788.4,0h-399l450,307Z" opacity="0.33" fill="url(#linear-gradient-6)"/>
+  <path id="Path_2619" data-name="Path 2619" d="M948.6,307,498.6,0H347.1l450,307Z" opacity="0.33" fill="url(#linear-gradient-6)"/>
+  <path id="Path_2620" data-name="Path 2620" d="M1648.21,450,1920,178.207V450Z" transform="translate(0 -143)" opacity="0.33" fill="url(#linear-gradient-2)"/>
+  <path id="Path_2621" data-name="Path 2621" d="M0,450H271.793L0,178.207Z" transform="translate(0 -143)" opacity="0.33" fill="url(#linear-gradient-6)"/>
+</svg>

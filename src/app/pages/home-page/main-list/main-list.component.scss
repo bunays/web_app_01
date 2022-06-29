@@ -1,0 +1,32 @@
+.profile-navTabs .nav-tabs {
+  margin-bottom: 2%;
+  border-bottom: none;
+}
+.profile-navTabs .nav-tabs .nav-link {
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  color: #b6b6b6;
+  border-bottom: none;
+//   background-color: #fff0f7;
+}
+.profile-navTabs .nav-tabs a.nav-link.active {
+  text-decoration: none;
+}
+.profile-navTabs .nav-tabs .nav-link.active {
+  border: none;
+  color: #fff;
+//   border-bottom: 1px solid #000;
+  text-decoration: underline;
+  background: #55ee2e;
+  box-sizing: border-box;
+  border: 1px solid #2feb00;
+  border-radius: 25px;
+}
+.profile-tab {
+    padding: 0 15px;
+}
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}

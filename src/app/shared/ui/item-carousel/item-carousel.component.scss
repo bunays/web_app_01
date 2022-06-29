@@ -1,0 +1,143 @@
+ngb-carousel {
+  display: flex;
+}
+ngb-carousel img {
+  width: 100%;
+  max-width: 2560px;
+  height: 470px;
+  opacity: 1;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+ngb-carousel {
+  width: inherit;
+  height: inherit;
+}
+.gradient {
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #e3e1e1 50%,
+    #fff 100%
+  );
+  background: -moz-linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #e3e1e1 50%,
+    #fff 100%
+  );
+  background: linear-gradient(to bottom, #ffffff 0%, #e3e1e1 50%, #fff 100%);
+}
+.sliding-logo-block {
+  width: 100%;
+  height: 130px;
+  border-radius: 50%;
+}
+.slideImg {
+  width: 100%;
+  // max-width: 220px;
+  height: 110px;
+  border-radius: 7%;
+}
+p.sub-cat-item {
+  font-size: 11px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 8px;
+}
+@media only screen and (max-width: 999px) {
+  .sliding-logo-block {
+    width: 100%;
+    height: 230px;
+    border-radius: 50%;
+  }
+  .slideImg {
+    width: 100%;
+    max-width: 200px;
+    height: 190px;
+    border-radius: 50%;
+  }
+  p.sub-cat-item {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sliding-logo-block {
+    width: 100%;
+    height: 180px;
+    border-radius: 50%;
+  }
+  .slideImg {
+    width: 100%;
+    max-width: 160px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  p.sub-cat-item {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .sliding-logo-block {
+    width: 100%;
+    height: 140px;
+    border-radius: 50%;
+  }
+  .slideImg {
+    width: 100%;
+    max-width: 130px;
+    height: 110px;
+    border-radius: 50%;
+  }
+  p.sub-cat-item {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .sliding-logo-block {
+    width: 100%;
+    height: 115px;
+    border-radius: 50%;
+  }
+  .slideImg {
+    width: 100%;
+    max-width: 130px;
+    height: 90px;
+    border-radius: 50%;
+  }
+  p.sub-cat-item {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .sliding-logo-block {
+    width: 100%;
+    height: 105px;
+    border-radius: 50%;
+  }
+  .slideImg {
+    width: 100%;
+    max-width: 120px;
+    height: 75px;
+    border-radius: 50%;
+  }
+  p.sub-cat-item {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .sliding-logo-block {
+    width: 100%;
+    height: 95px;
+    border-radius: 50%;
+  }
+  .slideImg {
+    width: 100%;
+    max-width: 100px;
+    height: 65px;
+    border-radius: 50%;
+  }
+  p.sub-cat-item {
+    font-size: 10px;
+  }
+}

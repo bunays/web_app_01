@@ -1,0 +1,248 @@
+<div class="loader loaded">
+    <div id="perspective" class="perspective effect-airbnb modalview mob-container animate">
+        <div class="main-wrapper">
+            <div class="main-content">
+                <div class="modal-header fixed-top">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        <b>Checkout</b>
+                    </h5>
+                    <a href="/home" class="more-btn blackbtn">
+                        <i class="ti-arrow-left"></i>
+                        back to home
+                    </a>
+                </div>
+                <div class="checkout-body">
+                    <div class="app-body single-item p-0 mt-50 form-wrap">
+                        <div class="col-sm-12">
+                            <div class="text-left pos-top">
+                                <!-- <h4 class="titleText text-left mt-4 mb-2 text-center"><strong>My Cart</strong></h4> -->
+                            </div>
+                            <div class="">
+                                <div class="pt-4">
+                                    <div class="bs-stepper modal-safety-padding linear">
+                                        <div class="bs-stepper-header" role="tablist">
+                                            <!-- your steps here -->
+                                            <div class="step " data-target="#logins-part">
+                                                <button type="button" class="step-trigger" role="tab"
+                                                    aria-controls="logins-part" id="logins-part-trigger"
+                                                    aria-selected="true">
+                                                    <span class="bs-stepper-circle">1</span>
+                                                    <!--     <span class="bs-stepper-label" >Cart</span> -->
+                                                </button>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="step" data-target="#coupon-part">
+                                                <button type="button" class="step-trigger" role="tab"
+                                                    aria-controls="coupon-part" id="coupon-part-trigger"
+                                                    aria-selected="false" disabled="disabled">
+                                                    <span class="bs-stepper-circle">2</span>
+                                                    <!--  <span class="bs-stepper-label">Confirm </span> -->
+                                                </button>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="step active" data-target="#information-part">
+                                                <button type="button" class="step-trigger" role="tab"
+                                                    aria-controls="information-part" id="information-part-trigger"
+                                                    aria-selected="false" disabled="disabled">
+                                                    <span class="bs-stepper-circle">3</span>
+                                                    <!-- <span class="bs-stepper-label">Checkout </span> -->
+                                                </button>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="step" data-target="#final">
+                                                <button type="button" class="step-trigger" role="tab"
+                                                    aria-controls="final" id="final-trigger" aria-selected="false"
+                                                    disabled="disabled">
+                                                    <span class="bs-stepper-circle"><i class="ti-check"></i></span>
+                                                    <!-- <span class="bs-stepper-circle">4</span> -->
+                                                    <!--   <span class="bs-stepper-label">Enjoy </span> -->
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="bs-stepper-content">
+
+                                            <div id="information-part" class="content fade dstepper-block active"
+                                                role="tabpanel" aria-labelledby="information-part-trigger">
+                                                <div class="card-body pt-3">
+                                                    <form [formGroup]="frmPlaceOrder">
+                                                        <div class="form-group input-group mb-3 mt-3 bg-white d-block">
+                                                            <label for="txt" class="label-for"
+                                                                id="validCustomerName">Enter
+                                                                Your Name
+                                                                *</label>
+                                                            <input class="form-control style2 form-control-lg"
+                                                                formControlName="txtName" id="customerName" type="text"
+                                                                placeholder="Name"
+                                                                [ngClass]="{ 'is-invalid': submitted && f.txtName.errors }" />
+                                                            <div *ngIf="submitted && f.txtName.errors"
+                                                                class="invalid-feedback">
+                                                                <div *ngIf="f.txtName.errors.required">
+                                                                    Please Enter Your Name
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group input-group mb-3 mt-3 bg-white d-block">
+                                                            <label for="txt" class="label-for"
+                                                                id="validCustomerPhone">Enter
+                                                                Your Phone
+                                                                *</label>
+                                                            <input
+                                                                class="form-control style2 form-control-lg numericValue"
+                                                                id="customerPhone" type="text" placeholder="Phone"
+                                                                formControlName="txtPhone"
+                                                                [ngClass]="{ 'is-invalid': submitted && f.txtPhone.errors }" />
+                                                            <div *ngIf="submitted && f.txtPhone.errors"
+                                                                class="invalid-feedback">
+                                                                <div *ngIf="f.txtPhone.errors.required">
+                                                                    Please Enter Your Phone Number
+                                                                </div>
+                                                                <div *ngIf="f.txtPhone.errors.minlength||
+                                                                f.txtPhone.errors.maxlength||
+                                                                f.txtPhone.errors.pattern">
+                                                                    Please Enter A Valid Phone Number
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="input-group mb-3 mt-3 bg-white d-block">
+                                    <label for="txt" class="label-for" id="validCustomerWhatsapp">Enter Your Whatsapp (Optional)</label>
+                                    <input class="form-control style2 form-control-lg" id="customerWhatsapp" type="number"
+                                        placeholder="Whatsapp" name="whatsapp" />
+                                </div>
+                                <div class="input-group mb-3 mt-3 bg-white d-block">
+                                    <label for="txt" class="label-for" id="validCustomerEmail">Enter Your Email (Optional)</label>
+                                    <input class="form-control style2 form-control-lg" id="customerEmail" type="email" placeholder="Email"
+                                        name="email" />
+                                </div> -->
+                                                        <div class="form-group input-group mb-3 mt-3 bg-white d-block"
+                                                            id="addressBlock">
+                                                            <label for="txt" class="label-for" id="validCustomerAddress"
+                                                                style="display: inline-block">Enter Your
+                                                                Address *</label>
+                                                            <textarea name="address" class="form-control style2-text"
+                                                                rows="3" formControlName="txtAddress"
+                                                                placeholder="Address" id="customerAddress"
+                                                                style="display: inline-block"
+                                                                [ngClass]="{ 'is-invalid': submitted && f.txtAddress.errors }">
+                                                        </textarea>
+                                                            <div *ngIf="submitted && f.txtAddress.errors"
+                                                                class="invalid-feedback">
+                                                                <div *ngIf="f.txtAddress.errors.required">
+                                                                    Please Enter Your Address
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group input-group mb-3 mt-3 bg-white d-block">
+                                                            <label for="txt" class="label-for">Special Note</label>
+                                                            <textarea name="order_note" class="form-control style2-text"
+                                                                rows="3" formControlName="txtSpecialNote"
+                                                                placeholder="Special Note"
+                                                                id="customerOrderNote"></textarea>
+                                                        </div>
+
+                                                        <div class="card p-3" *ngIf="cartSummary[0].strServiceMode == 'Delivery'">
+                                                            <div class="subhead my-2 ">
+                                                                <div class="text-center">
+                                                                    <p style="font-size: 18px;color: #333333;">
+                                                                        <b>Is the pin in the right location?</b>
+                                                                    </p>
+                                                                </div>
+                                                                <p
+                                                                    style="font-size: 14px;color: #6b6b6b;line-height: 25px; text-align: center;">
+                                                                    Click and drag the pin to the exact spot.
+                                                                </p>
+                                                            </div>
+                                                            <div class="map">
+                                                                <div class="_3Um38 _2oQ4_ locationInput">
+                                                                    <input class="_381fS _1oTLG _3BIgv "
+                                                                        (keyup)="checkInput($event)" #location
+                                                                        matGoogleMapsAutocomplete
+                                                                        (onAutocompleteSelected)="onAutocompleteSelected($event)"
+                                                                        (onLocationSelected)="onLocationSelected($event)">
+                                                                    <div class="NqZN6" *ngIf="location.value"
+                                                                        (click)="ClearLocation()">
+                                                                        Clear
+                                                                    </div>
+                                                                    <!-- <div class="_1b8uz" *ngIf="!blnIsAvailability">{{message}}</div> -->
+                                                                </div>
+
+                                                                <!-- <a class="_3iFC5" (click)="CheckAddressAvailability()" style="text-decoration: none;"><span>FIND
+                                                                SHOPS</span>
+                                                            </a> -->
+                                                                <div class="card">
+                                                                    <agm-map [latitude]="latitude"
+                                                                        [longitude]="longitude" [scrollwheel]="false"
+                                                                        [zoom]="zoom">
+                                                                        <agm-marker [latitude]="latitude"
+                                                                            [longitude]="longitude"
+                                                                            [markerDraggable]="true"
+                                                                            (dragEnd)="markerDragEnd($event)">
+                                                                        </agm-marker>
+                                                                    </agm-map>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+
+                                                    <form [formGroup]="frmPayment">
+                                                        <div class="input-group mb-3 mt-3 bg-white d-block form-group">
+                                                            <label for="txt" class="label-for spl-lbl">Payment
+                                                                Mode</label><br />
+                                                            <span id="validPaymentMode" style="font-size: 12px"></span>
+                                                            <div class="md-radio w100 mb-3">
+                                                                <input id="pmode1" class="form-control" type="radio"   formControlName="txtPaymentMode" name="txtPaymentMode"
+                                                                    value="Cash On Delivery" />
+                                                                <label for="pmode1">Cash On Delivery (COD)</label>
+                                                            </div>
+                                                            <div class="md-radio w100">
+                                                                <input id="pmode2" class="form-control" type="radio" formControlName="txtPaymentMode" name="txtPaymentMode"
+                                                                    value="Card On Delivery" />
+                                                                <label for="pmode2">Card On Delivery</label>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+
+                                                    
+
+                                                    <!--   <div id="reviewOrder">&nbsp; </div> -->
+
+                                                    <div class="text-center mt-4" style="margin-bottom: 15px;">
+                                                        <button type="button" style=" color: #fff;" class="btn btn-warning toCart"
+                                                            id="clear" (click)="onClickNavigateCart()">
+                                                            <i class="ti-shopping-cart-full mr-2"></i>
+                                                            Edit Cart
+                                                        </button>
+                                                    </div>
+                                                    <div class="fixed-cta-btn">
+                                                        <button type="button" (click)="onClickPlaceOrder()" class="btn-success toFinal fw-600 next-tour btn btn-lg text-center w-100 text-white">
+                                                            Place Your Order
+                                                        </button>
+                                                        <!-- <i class="ti ti-check mr-1"></i> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ngx-spinner bdColor="rgba(213,208,208,0.8)" size="medium" color="#fff"></ngx-spinner>
+    </div>
+    
+</div>
+
+<div id="desktop-view">
+    <div class="container" style="flex-direction: column;">
+        <div class="divider" style="border-color: rgb(74, 65, 42);"></div>
+        <div style="text-align: right; margin-right :30px">
+            <img src="assets/images/Retro-Logo.png" width="250">
+        </div>
+    </div>
+</div>

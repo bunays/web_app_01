@@ -1,0 +1,438 @@
+{
+    "NavBar": {
+        "Login": "Login",
+        "More": "More",
+        "MyAccount": "My Account",
+        "Logout": "Logout",
+        "WhatAreYouLookingFor": "What are you looking for?",
+        "NotFound": "Not Found"
+    },
+    "ScrollingBar": {
+        "AllCategories": "All Categories",
+        "NoShops": "No Shops",
+        "NoCategoriesFound": "No Categories Found!",
+        "FindProducts": "Find Products",
+        "ViewAllCategories": "View All Categories"
+    },
+    "Footer": {
+        "FollowUsOn": "Follow us on :",
+        "NeedHelp": "Need Help?",
+        "CallUs": "Call us",
+        "EmailUs": "Email us",
+        "JoinOurTelegram": "Join our Telegram",
+        "BeASeller": "Be a Seller",
+        "ApplyNow": "Apply now",
+        "ProductCategories": "Product Categories",
+        "Policies": "Policies",
+        "TermsConditions": "Terms & Conditions",
+        "PrivacyPolicy": "Privacy Policy",
+        "Home": "Home",
+        "Login": "Login",
+        "CustomersArea": "Customers Area",
+        "Cart": "Cart",
+        "Orders": "Orders",
+        "Favourites": "Favourites",
+        "Notifications": "Notifications",
+        "MyAccount": "My Account",
+        "DownloadApp": "Download Apps"
+    },
+    "TopBar": {
+        "DeliverTo": "Deliver To"
+    },
+    "Advertisements": {
+        "TopProducts": "Top Products",
+        "Trending": "Trending Nike Sneaker ",
+        "ShopNow": "Shop Now",
+        "NewArrivals": "New Arrivals",
+        "VeganFriendly": "Vegan friendly makeup",
+        "BestSeller": "Best-seller",
+        "FashionAccessories": "Fashion apple accessories",
+        "Services": "Services",
+        "OnlineServices": "24/7 Online Services",
+        "BookNow": "Book Now"
+    },
+    "ShopType": {
+        "ViewAllCategories": "View All Categories"
+    },
+    "Business": {
+        "QuickDelivery": "Quick Delivery",
+        "DeliveryGuaranteed": "Delivery within in minutes guaranteed",
+        "SecurePayment": "Secure Payment",
+        "SafeAndSecure": "Safe and secure payment methods",
+        "Best Quality": "Best Quality",
+        "BestQualityDelivered": "We ensure best quality products to be delivered",
+        "ReturnGuarantee": "Return guarantee",
+        "EasyReturnOptions": "Easy and systematic return options"
+    },
+    "FeaturedVendors": {
+        "FeaturedVendors": "Featured Vendors"
+    },
+    "FlashSale": {
+        "FlashSale": "Flash Sale",
+        "SaleLive": "Sale is live",
+        "Day": "Day",
+        "Hrs": "Hrs",
+        "Min": "Min",
+        "S": "S"
+    },
+    "LogoSlider": {
+        "RecentViews": "Your Recent Views"
+    },
+    "ShopTypes": {
+        "InstantDelivery": "Instant delivery at your door step",
+        "MustOrdered": "Most ordered form around your locality",
+        "ViewMore": "View More",
+        "LoadMore": "Load More"
+    },
+    "SlidingItems": {
+        "TopSellers": "Top Sellers This Week",
+        "ViewMore": "View More"
+    },
+    "StaticContent": {
+        "PaymentSecured": "100% payment secured",
+        "Payments": "Support lots of payments",
+        "Support": "24 hours/7 days support",
+        "FreePrice": "Free delivery with QAR25",
+        "BestPrice": "Best Price guaranteed",
+        "Mobile": "Mobile apps ready",
+        "FreeDelivery": "Free Delivery With QAR25"
+    },
+    "GetTouch": {
+        "GetInTouch": "Get In Touch",
+        "SupportChannels": "With Our Support Channels",
+        "WhatsApp": "WHATSAPP",
+        "Telephone": "TELEPHONE",
+        "Email": "EMAIL"
+    },
+    "TopPicks": {
+        "TopOffers": "Top offers for you",
+        "MostOffered": "Most ordered from around your locality"
+    },
+    "BestSellers": {
+        "BestSellers": "Best Sellers",
+        "Products": "Products",
+        "NoShopsFound": "No Shops Found!"
+    },
+    "ListCart": {
+        "MyCart": "My Cart",
+        "YourCartIsEmpty": "Your cart is empty!",
+        "CheckOut": "Check Out",
+        "Pc": "pc",
+        "OrderSummary": "Order Summary",
+        "NoOfItems": "No. Of Items :",
+        "Total": "Total",
+        "SubTotal":"Sub Total :",
+        "DeliveryFee": "Delivery Fee :",
+        "GrandTotal":"Grand Total :",
+        "Free": "Free"
+    },
+    "ShopDetails": {
+        "WithIn": "WithIn :",
+        "Delivery": "Delivery",
+        "Free": "Free"
+    },
+    "Category": {
+        "Categories": "Categories",
+        "BrowseProduct": " Browse Product By Categories",
+        "NoCategoriesFound": "No Categories Found!"
+    },
+    "CategoryList": {
+        "AllCategories": "All Categories",
+        "NoCategoriesFound": "No Categories Found!"
+    },
+    "OrdersPage": {
+        "MyOrders": "My Orders",
+        "NoOrdersFound": "No Orders Found!",
+        "NoItemsFound": "No Items Found!"
+    },
+    "Profile": {
+        "MyProfile": "My Profile",
+        "Name": "Name:",
+        "Email": "Email:",
+        "ValidEmail": "Email must be a valid email address",
+        "Edit": "Edit",
+        "Cancel": "Cancel",
+        "Save": "Save",
+        "Address": "Address",
+        "Orders": "Orders",
+        "Rewards": "Rewards"
+    },
+    "ProfileAddress": {
+        "ManageAddress": "Manage Address",
+        "SelectAddress": "Select an address",
+        "Edit": "Edit",
+        "Delete": "Delete"
+    },
+    "ProfileOrder": {
+        "PastOrders": "Past Orders",
+        "NoPastOrders": "No past orders",
+        "ViewDetails": "View Details",
+        "Items": "Items",
+        "TotalAmount": "Total Amount"
+    },
+    "ProfileRewards": {
+        "BalanceAvailable": "Balance Available",
+        "YourTransactions": "Your Transactions",
+        "NoTransactions": "No Transactions"
+    },
+    "NewArrivals": {
+        "NewArrivals": "New Arrivals",
+        "WithIn": "With In",
+        "Delivery": "Delivery",
+        "Free": "Free",
+        "ViewMoreItems": "View More Items",
+        "NoNewArrivalsFound": "No New Arrivals Found!"
+    },
+    "Notifications": {
+        "Notifications": "Notifications",
+        "ClearAll": "Clear All",
+        "OrderStatus": "Order Status",
+        "Name": "Name",
+        "Only": "only",
+        "More": "more",
+        "Items": "Items",
+        "NoNotifications": "No Notifications"
+    },
+    "Offers": {
+        "TopOffersForYou": "Top offers for you!",
+        "WithIn": "With In",
+        "Delivery": "Delivery",
+        "Free": "Free",
+        "ExploreShop": "Explore Shop",
+        "NoOffersFound": "No Offers Found!"
+    },
+    "OrderDetails": {
+        "OrderDetails": "Order Details",
+        "OrderId": "Order Id",
+        "ShopName": "Shop Name",
+        "OrderStatus": "Order Status",
+        "Items": "Items",
+        "Ordered": "Ordered",
+        "Packed": "Packed",
+        "Shipped": "Shipped",
+        "Delivered": "Delivered",
+        "Cancelled": "Cancelled",
+        "Returned": "Returned",
+        "Cancel": "Cancel",
+        "TrackOrderHere": "You can this order here",
+        "TrackOrder": "Track Order",
+        "DeliveryAddress": "Delivery Address",
+        "Zone": "Zone No.",
+        "Building": "Building No.",
+        "Street": "Street No.",
+        "House": "House No.",
+        "Address": "Address",
+        "Landmark": "Landmark",
+        "Mobile": "Mobile No.",
+        "PaymentType": "Payment Type",
+        "PriceDetails": "Price Details",
+        "SubTotal": "Sub Total",
+        "Discount": "Discount",
+        "RewardsRedeemed": "Rewards Redeemed",
+        "DeliveryCharge": "Delivery Charge",
+        "Free": "Free",
+        "TotalAmount": "Total Amount",
+        "OrderTracking": "Order Tracking",
+        "BillTotal": "Bill Total",
+        "OrderIsReady": "order is ready for delivery",
+        "PreparingOrder": "is preparing your order",
+        "OnTheWayToLocation": "is on the way to your location to deliver your order",
+        "TripStart": "Trip yet to start",
+        "DeliveryIn": "Delivery in"
+    },
+    "OrderSuccess": {
+        "OrderSuccessfully": "Order Successfully Placed",
+        "YourOrderId": "Your Order ID",
+        "ReceiveConfirmation": "You'll receive an sms confirmation shortly to",
+        "OrderTotal": "Order Total",
+        "PaymentMethod": "Payment Method",
+        "MyAccount": "My Account",
+        "ContinueShopping": "Continue Shopping"
+    },
+    "ProductCard": {
+        "AddToCart": "Add to cart",
+        "BookNow": "Book Now",
+        "Customisable": "Customisable",
+        "AddOn": "Add-Ons",
+        "Total": "Total",
+        "RepeatCustomization": "Repeat last used customization?",
+        "PreviousCustomization": "Your previous customization",
+        "Small": "Small",
+        "IWillChoose": "I'll Choose",
+        "Repeat": "Repeat"
+    },
+    "SubCategory": {
+        "SubCategory": "SubCategory"
+    },
+    "Product": {
+        "SortBy": "Sort by",
+        "ChooseAnOption": "Choose an option",
+        "Discount": "Discount",
+        "PriceLowestToHighest": "Price (lowest first)",
+        "PriceHighestToLowest": "Price (highest first)",
+        "Newest": "Newest",
+        "Brand": "Brand",
+        "ProductType": "Product type",
+        "ChooseAType": "Choose a type",
+        "Veg": "Veg",
+        "NonVeg": "Non-Veg",
+        "Others": "Others",
+        "Filter": "Filter",
+        "NoItemsFound": "No Items Found!",
+        "LoadMore": "Load More"
+    },
+    "Questionnaire": {
+        "GoToCart": "Go To Cart",
+        "NoItemsFound": "No Items Found!",
+        "ServiceCharge": "Service Charge",
+        "Frequency": "Frequency",
+        "ServiceDetails": "Service Details",
+        "SpecialInstructions": "Do you have any special instructions?",
+        "Total": "Total",
+        "Submit": "Submit"
+    },
+    "SearchPage": {
+        "Products": "Products",
+        "SearchForItems": "Search for items"
+    },
+    "SellerOtpForm": {
+        "EnterPhoneNumber": "Enter Your Phone Number",
+        "NumberToContinue": "Please Enter Your Phone Number To Continue",
+        "PhoneNoRequired": "Phone no required!",
+        "ValidPhoneNumber": "Please enter a valid phone number!",
+        "OtpRequired": "OTP number required!",
+        "SendOtp": "Send OTP",
+        "VerifyOtp": "Verify OTP"
+    },
+    "SellerRegisterForm":{
+        "RegisterShop": "Register Your Shop",
+        "PersonalInfo": "Personal Info",
+        "SalesExecutive": "Sales executive name",
+        "NameRequired": "Name required",
+        "PhoneNumber": "Phone Number",
+        "ShopName":"Shop Name",
+        "ShopNameRequired": "Shop name required",
+        "ShopType": "Shop Type",
+        "SelectShopType": "Select a shop type",
+        "ShopTypeRequired": "Shop type required",
+        "RightLocation": "Is the pin in the right location?",
+        "ClickDrag": "Click and drag the pin to the exact spot.",
+        "Clear": "Clear",
+        "RegisterYourShop": "Register Your Shop"
+    },
+    "ShopSuccess": {
+        "AccountCreated": "Your account has been successfully created",
+        "VerifyDetails": "Our team will be verify your details soon",
+        "AccountActivated": "Your account will be activated in next 48 hours",
+        "BackToHom": "Back to home"
+    },
+    "ShopCategory": {
+        "WithIn": "With In",
+        "Delivery": "Delivery",
+        "Free": "Free",
+        "NoShopsFound": "No Shops Found!",
+        "LoadMore": "Load More"
+    },
+    "Shops": {
+        "TopOffersForYou": "Top offers for you",
+        "MostOrdered": "Most ordered from around your locality"
+    },
+    "TopProducts": {
+        "TopProducts": "Top Products",
+        "WithIn": "With In",
+        "Delivery": "Delivery",
+        "Free": "Free",
+        "ViewMoreItems":"View More Items",
+        "NoProductsFound": "No Products Found!"
+    },
+    "TopSellers": {
+        "TopSellers": "Top sellers of this week",
+        "Products": "Products",
+        "NoShopsFound": "No Shops Found!"
+    },
+    "Wishlist": {
+        "Favorites": "Favorites",
+        "NoItemsFound": "No Items Found!"
+    },
+    "AddLocation": {
+        "DontServe": "Sorry! We don't serve at your location currently.",
+        "SelectLocation":"Select Location",
+        "SavedAddress": "Saved Addresses"
+    },
+    "CheckOut": {
+        "YourCartIsEmpty":"Your cart is empty!",
+        "HomePageToViewMore": "You can go to home page to view more shops",
+        "SeeShopsNearYou": "See Shops Near you",
+        "LogIn": "Log In",
+        "Checkout": "Checkout",
+        "PlaceOrder": "Place Order"
+    },
+    "CheckOutCart": {
+        "OrderSummary": "Order Summary",
+        "SubTotal": "Sub Total",
+        "PromoDiscount": "Promo Discount",
+        "Rewards": "Rewards",
+        "DeliveryCharges": "Delivery Charges",
+        "GrandTotal": "Grand Total",
+        "RedeemCoupon": "Redeem Your Coupon",
+        "ApplyCoupon": "Apply Coupon",
+        "Remove": "Remove",
+        "YouWillGet": "You will get",
+        "OffThisOrder": "off on this order",
+        "OffThisOrderUpTo": "off on this order upto",
+        "ApplicableForOrders": "Applicable for orders above",
+        "AvailableBalance": "Available Balance",
+        "UseYourRewardsPoint": "Use your rewards point",
+        "CouponCode": "Coupon Code",
+        "Free": "Free"
+    },
+    "PaymentOptions": {
+        "ChoosePayment": "Choose Payment",
+        "PaymentType": "Payment Type",
+        "CardOnDelivery": "Card On Delivery",
+        "Card": "Card",
+        "CashOnDelivery": "Cash On Delivery",
+        "Cash": "Cash",
+        "PayOnline": "Pay Online",
+        "OnlinePayment": "Online payment recommended to reduce contact between you and your delivery partner"
+    },
+    "DeliveryAddress": {
+        "DeliveryAddress": "Delivery Address",
+        "Change": "Change",
+        "SelectDeliveryAddress": "Select Delivery Address",
+        "NoDeliverableAddress": "No deliverable address in this location. Please add a new address.",
+        "AddNewAddress": "Add New Address",
+        "DeliveryAvailable": "Delivery Available",
+        "NotDeliverable": "Not Deliverable",
+        "DeliverHere": "DELIVER HERE",
+        "AddNew": "Add New"
+    },
+    "AddNewAddress": {
+        "SaveDeliveryAddress": "Save Delivery Address",
+        "Name": "Name",
+        "NameRequired":"Name required",
+        "ZoneNo": "Zone No.",
+        "ZoneNumberRequired": "Zone number required",
+        "BuildingNo": "Building No.",
+        "BuildingNumberRequired": "Building number required",
+        "StreetNo": "Street No.",
+        "StreetNumberRequired": "Street number required",
+        "DoorNo": "Door No. / Building Name",
+        "DoorNumberRequired": "Door number / Building name required",
+        "Landmark": "Landmark",
+        "LandmarkRequired": "Landmark required",
+        "Phone": "Phone",
+        "PhoneNumberRequired": "Phone number required",
+        "ValidPhoneNumber":"Please enter a valid phone number!",
+        "Home": "Home",
+        "Work": "Work",
+        "Other": "Other",
+        "SaveAddress": "Save Address",
+        "Proceed": "Proceed"
+    },
+    "EditAddress": {
+        "EditAddress": "Edit Address",
+        "SaveChanges": "Save Changes"
+    }
+
+}

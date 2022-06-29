@@ -1,0 +1,38 @@
+<div id="all_cat_title" class="item-header fw-600 text-black mt-0 mb-0" style="display: block;">
+    <h4 class=" ">
+        Search Results
+    </h4>
+    <a href="/home" class="more-btn cat_link_menu  ">
+        <i class="ti-arrow-left"></i>
+        All Items
+    </a>
+</div>
+<div class="all-search-items">
+    <div class="row">
+        <div class="col-sm-6" *ngFor="let product of products">
+            <a class="showProductInfo" (click)="onClickNavigate(product)">
+                <!--  -->
+                <div class="item list-item-full  pl-0 pr-0">
+                    <figure class="mb-0"><img [src]="product?.arrayThumbnail[0]?.imageUrl" (error)="errorImage($event)"></figure>
+                    <div class="content-div"></div>
+                    <div class="bg-price price">
+                        <!-- AED -->
+                        <span>
+                            <!-- <del class="red-color">
+                                50
+                            </del> -->
+                            AED
+                            {{product?.intMRP}}
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <h4 class="">
+                {{product?.strProductName}}
+            </h4>
+            <del class="strike-color" *ngIf="product?.intMRP > product?.intSellingPrice">
+                AED {{product?.intMRP}}
+            </del>
+        </div>
+    </div>
+</div>

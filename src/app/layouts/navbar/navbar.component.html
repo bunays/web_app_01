@@ -1,0 +1,71 @@
+<header class="bg-white style2 pt-2 bg-home">
+    <div class="row">
+        <div class="col-sm-4 text-left pos-top">
+            <a href="#" class="menu-btn mt-0" id="sidebar-right"><span></span></a>
+        </div>
+        <div class="col-sm-4 text-center pos-top" style="padding-top: 8px">
+            <a href="#" class="logo d-block mt-2 cat_link_menu"><img src="assets/images/organic-cafe-logo.png"
+                    alt="" /></a>
+        </div>
+        <div class="col-sm-4 text-right pos-top">
+            <a (click)="openVerticallyCentered(content)" class="cart-btn mt-1">
+                <!--  <img src="images/lang_icon.png" width="26" >  -->
+                <i class="ti ti-more-alt text-61"></i>
+            </a>
+        </div>
+        <div class="col-sm-12 text-left pos-top">
+            <!-- <h2 class="titleText  mt-0 mb-0 ">
+            Discover Your Taste </h2> -->
+        </div>
+        <div class="col-sm-12 text-left mt-1 mb-2 pos-top">
+            <div class="form-content style1">
+                <form>
+                    <input type="text" id="menu_search" class="form-control bg-white" placeholder=" Search..." />
+                </form>
+            </div>
+            <div id="search-title" class="item-header fw-600 text-white mt-2 mb-0" style="display: none">
+                <a href="#" class="more-btn cat_link_menu text-white"><i class="ti-arrow-left"></i> back to home
+                </a>
+                <h5 class="">Search Result</h5>
+            </div>
+        </div>
+    </div>
+</header>
+
+<ng-template #content let-modal>
+    <!-- <div class="modal fade action-sheet show" style="display: block;"> -->
+    <div class="modal-header text-center d-block">
+        <h5 class="modal-title text-center ">
+            Choose Language
+        </h5>
+    </div>
+    <div class="modal-body">
+        <ul class="action-button-list  text-center">
+            <li>
+                <a href="language-switch?lang=en" class="btn btn-list text-primary">
+                    <span><i class="ti-align-right"></i>English</span>
+                </a>
+            </li>
+            <li>
+                <a href="language-switch?lang=ar" class="btn btn-list ar">
+                    <span><i class="ti-align-right"></i>اللغة العربية</span>
+                </a>
+            </li>
+
+            <li class="action-divider"></li>
+            <li class="pb-1">
+                <a class="btn btn-list text-danger " data-dismiss="modal" (click)="modal.close('Close click')">
+                    <span>
+                        <i class="ti-info-alt"></i> Close
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-light" >
+            Close
+        </button>
+    </div> -->
+    <!-- </div> -->
+</ng-template>

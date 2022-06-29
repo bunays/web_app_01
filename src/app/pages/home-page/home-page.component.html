@@ -1,0 +1,380 @@
+<mat-drawer-container class="example-container" (backdropClick)="close('backdrop')" autosize>
+    <div class="loader loaded">
+        <div id="perspective" class="perspective effect-airbnb modalview mob-container animate">
+            <div class="main-wrapper">
+                <div class="main-content">
+                    <!-- <app-navbar></app-navbar> -->
+                    <header class="header-main bg-white style2 pt-2 bg-home">
+                        <div class="row">
+                            <div class="col-sm-4 text-left pos-top" (click)="drawer.open()">
+                                <a class="menu-btn-top mt-0" id="sidebar-right"
+                                    (click)="drawer.open()"><span></span></a>
+                            </div>
+                            <div class="col-sm-4 text-center pos-top" style="padding-top: 8px">
+                                <a routerLink="/home" class="logo-main d-block mt-2 cat_link_menu"><img
+                                        src="assets/images/Retro-Logo-3.png" width="120" height="89" alt="Logo" /></a>
+                            </div>
+                            <div class="col-sm-4 text-right pos-top">
+                                <a routerLink="/best-deals" class="cart-btn mt-1">
+                                    <i class="fa fa-gift text-61" title="Offers"></i>
+                                </a>
+                            </div>
+                            <div class="col-sm-12 text-left pos-top">
+                                <!-- <h2 class="titleText  mt-0 mb-0 ">
+                                Discover Your Taste </h2> -->
+                            </div>
+                       
+                        </div>
+                    </header>
+
+
+                    <div class="app-body bg-danish">
+                        <!-- <app-item-carousel *ngIf="!searchResult"></app-item-carousel> -->
+                        <div class="row">
+                            <div class="col-sm-12 mb-2" *ngIf="!searchResult">
+                                <app-top-banner></app-top-banner>
+                            </div>
+                            <div class="col-sm-12 text-left mt-1 mb-2 pos-top">
+                                <div class="form-content style1">
+
+                                    <input type="text" id="menu_search" class="form-control bg-white"
+                                        placeholder=" Customer Search..." [(ngModel)]="searchString" onfocus="value=''" value=""
+                                        #searchTags />
+
+                                </div>
+                             
+                            </div>
+                            <div class="col-sm-12">
+                                <app-main-list *ngIf="!searchResult"></app-main-list>
+                                <div class="px-3" *ngIf="searchResult">
+                                    <!-- <app-search-products *ngIf="arrProducts.length" [products]="arrProducts"> -->
+                                    <!-- </app-search-products> -->
+
+                                    <div class="text-center no-item" *ngIf="!arrProducts.length">
+                                        <i class="ti-face-sad"></i>
+                                        <br>
+                                        No Item Found
+                                        <br>With This Specification !
+                                    </div>
+
+                                </div>
+
+                                <!-- <app-categories></app-categories> -->
+                                <!-- <app-sub-categories></app-sub-categories> -->
+                                <!-- <app-product-details></app-product-details> -->
+                                <!-- <app-checkout></app-checkout> -->
+                                <!-- <app-feedback></app-feedback> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <nav class="navigation style7 style1">
+                    <div class="container pl-0 pr-0">
+                        <div class="nav-content">
+                            <ul>
+                                <li>
+                                    <a routerLink="/categories" class="nav-content-bttn  allCat">
+                                        <i class="ti-view-list"></i>
+                                        Categories
+                                    </a>
+                                </li>
+                                <li>
+                                    <a routerLink="/best-deals" class="nav-content-bttn">
+                                        <i class="ti-gift"></i>
+                                        Best Deals
+                                    </a>
+                                </li>
+                                <li class="shopping-cart">
+                                    <a routerLink="/home"
+                                        class="cart-count mt-1 nav-content-bttn nav-center showCartInfo">
+                                        <i class="ti-home"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a routerLink="/my-orders" class=" nav-content-bttn">
+                                        <i class="ti-bag"></i>
+                                        My Orders
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://api.whatsapp.com/send?phone=918589049648" class="nav-content-bttn"
+                                        data-tab="favorites">
+                                        <i class="fa fa-whatsapp "></i>
+                                        Whatsapp
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- <div id="container-floating" class="is-opened" (click)="rotate()">
+                    <div id="floating-button">
+                        <a data-toggle="tooltip" data-placement="right" title="" data-original-title="Scan QR">
+                            <p class="plus"><img [@rotatedState]='state' src="assets/images/qr_img.png" width="40"></p>
+                        </a>
+                    </div>
+                </div> -->
+                <div id="container-floating" class="is-opened">
+                    <div id="floating-button">
+                        <div class="">
+                            <a routerLink="/cart" class="plus cart-count mt-1 nav-content-bttn nav-center showCartInfo">
+                                <i class="ti-shopping-cart-full"></i>
+                                <!-- <span id="cartStat"></span> -->
+                                <span class="badge rounded-pill badge-cart" *ngIf="intCartItemCount > 0">{{
+                                    intCartItemCount }}
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- <nav class="outer-nav left vertical ">
+                <header class="bg-tranparent style2 mt-3 pb-0 bg-home">
+                    <div class="row">
+                        <div class="col-sm-4 text-left pos-top">
+                            <a class="menu-btn mt-0" id="close-sidebar" (click)="animate2()"></a>
+                        </div>
+                        <div class="col-sm-4 text-center pos-top">
+                            <a href="#" class="logo d-block mt-1"><img src="assets/images/logo-light-text.png"
+                                    class="img-fluid"></a>
+                        </div>
+                    </div>
+                </header>
+                <ul class="nav-item ">
+
+                    <li>
+                        <a href="#" class=" cat_link_menu"><i class="ti-home"></i>
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="best" class=" spl_link_menu">
+                            <i class="ti-face-smile"></i>
+                            Popular
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="special" class=" spl_link_menu">
+                            <i class="ti-star"></i>
+                            Featured
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="allCat">
+                            <i class="ti-layout-grid2 "></i>
+                            Categories
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="myOrder">
+                            <i class="ti-shopping-cart "></i>
+                            My Orders
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="feedbackNav">
+                            <i class="ti-comment-alt"></i>
+                            Feedback
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="xxxshowstoreInfo">
+                            <i class="ti-layout-media-center-alt "></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="ti-info-alt"></i>
+                            Tijara Online
+                        </a>
+                    </li>
+
+                </ul>
+            </nav> -->
+
+        </div>
+
+    </div>
+
+    <div id="desktop-view">
+        <div class="container" style="flex-direction: column;">
+            <div class="divider" style="border-color: rgb(74, 65, 42);"></div>
+            <div style="text-align: right; margin-right :30px">
+                <img src="assets/images/Retro-Logo.png" width="250">
+            </div>
+        </div>
+    </div>
+
+    <mat-drawer #drawer class="example-sidenav" mode="over" (keydown.escape)="close('escape')" disableClose>
+
+        <nav class="outer-nav left vertical ">
+            <header class="bg-tranparent style2 pt-3 bg-home">
+                <div class="row">
+                    <!-- <div class="col-sm-4 text-left pos-top">
+                        <a class="menu-btn mt-0" id="close-sidebar" (click)="close('toggle button')"></a>
+                    </div> -->
+                    <div class="col-sm-12 text-center pos-top">
+                        <a routerLink="/home" class="logo d-block mt-1"><img src="assets/images/Retro-Logo.png"
+                                class="" width="150" height="100"></a>
+                    </div>
+                </div>
+
+            </header>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="nav-item ">
+
+                        <li>
+                            <a routerLink="/home" class=" cat_link_menu"><i class="ti-home"></i>
+                                Home
+                            </a>
+                        </li>
+
+                        <!-- <li>
+                            <a href="best" class=" spl_link_menu">
+                                <i class="ti-face-smile"></i>
+                                Popular
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="special" class=" spl_link_menu">
+                                <i class="ti-star"></i>
+                                Featured
+                            </a>
+                        </li> -->
+
+                        <li>
+                            <a routerLink="/categories" class="allCat">
+                                <i class="ti-view-list "></i>
+                                Categories
+                            </a>
+                        </li>
+
+                        <li>
+                            <a routerLink="/best-deals" class="allCat">
+                                <i class="fa fa-gift "></i>
+                                Offers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a routerLink="/my-orders" class="myOrder">
+                                <i class="ti-bag "></i>
+                                My Orders
+                            </a>
+                        </li>
+
+                        <li>
+                            <a routerLink="/cart" class="myOrder">
+                                <i class="ti-shopping-cart-full "></i>
+                                My Cart
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="tel:+91 8589 0496 48" class="nav-content-bttn">
+                                <i class="ti-mobile"></i>
+                                Call Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.google.com/maps?q=Ras+Al+khor+3+Dubai+U.A.E&amp;rlz=1C1RXQR_enIN928IN928&amp;um=1&amp;ie=UTF-8&amp;sa=X&amp;ved=2ahUKEwiN8I3--ovvAhWTILcAHbiTDmEQ_AUoAXoECAUQAw"
+                                class=" nav-content-bttn">
+                                <i class="ti-location-pin"></i>
+                                Location
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=918589049648" class="nav-content-bttn"
+                                data-tab="favorites">
+                                <i class="fa fa-whatsapp "></i>
+                                Whatsapp
+                            </a>
+                        </li>
+
+                        <!-- <li>
+                        <a href="#" class="feedbackNav">
+                            <i class="ti-comment-alt"></i>
+                            Feedback
+                        </a>
+                    </li> -->
+
+                        <li>
+                            <a routerLink="#" class="xxxshowstoreInfo">
+                                <i class="ti-layout-media-center-alt "></i>
+                                About Us
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- <hr class="line-1"> -->
+
+        <div class="version-logo p-3 text-center">
+            <img src="assets/images/logo-tijara.png" width="100" height="70" alt="">
+            <p class="version">v1.1.0.0</p>
+        </div>
+
+        <!-- <hr class="line-1"> -->
+
+    </mat-drawer>
+
+
+    <ng-template #content let-modal>
+        <!-- <div class="modal fade action-sheet show" style="display: block;"> -->
+        <div class="modal-header text-center d-block">
+            <h5 class="modal-title text-center ">
+                Choose Language
+            </h5>
+        </div>
+        <div class="modal-body">
+            <ul class="action-button-list  text-center">
+                <li>
+                    <a href="language-switch?lang=en" class="btn btn-list text-primary">
+                        <span><i class="ti-align-right"></i>English</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="language-switch?lang=ar" class="btn btn-list ar">
+                        <span><i class="ti-align-right"></i>اللغة العربية</span>
+                    </a>
+                </li>
+
+                <li class="action-divider"></li>
+                <li class="pb-1">
+                    <a class="btn btn-list text-danger " data-dismiss="modal" (click)="modal.close('Close click')">
+                        <span>
+                            <i class="ti-info-alt"></i> Close
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-light" >
+                Close
+            </button>
+        </div> -->
+        <!-- </div> -->
+    </ng-template>
+</mat-drawer-container>

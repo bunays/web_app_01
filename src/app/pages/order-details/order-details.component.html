@@ -1,0 +1,215 @@
+<div class="loader loaded">
+    <div id="perspective" class="perspective effect-airbnb modalview mob-container animate">
+        <div class="main-wrapper">
+            <div class="main-content">
+                <div class="modal-header fixed-top">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        <b>Order Details</b>
+                    </h5>
+                    <a href="/home" class="more-btn blackbtn">
+                        <i class="ti-arrow-left"></i>
+                        back to home
+                    </a>
+                </div>
+                <div class="checkout-body">
+                    <div class="app-body single-item p-0 mt-50 form-wrap">
+                        <div class="col-sm-12">
+                            <div class="">
+                                <div class="pt-4">
+
+                                    <div class="">
+                                        <p class="order-details-ID_odID">
+                                            ORDER ID: <b class="od-orderID_odID">{{objOrderDetails?.strOrderID}}</b>
+                                        </p>
+                                    </div>
+
+                                    <hr class="hr">
+
+                                    <div class="row my-1">
+                                        <div class="col">
+                                            <p class="font-weight-bold">Items: {{objOrderDetails?.intTotalItemQuantity}}
+                                            </p>
+                                            <!-- {{'OrderDetails.Items' | translate}} -->
+                                        </div>
+                                    </div>
+
+                                    <div *ngFor="let item of objOrderDetails?.arrayProductDetails">
+                                        <div class="orderdetails_2">
+                                            <div class="orderdetails-desc_odD">
+                                                <p class="od-product-title_ptl">
+                                                    <b>{{item?.strProductName}} <small>x</small>
+                                                        ({{item?.intQuantity}})</b>
+                                                </p>
+                                                <p class="od-product-size_ps"
+                                                    *ngIf="item?.strPriceVariation && item?.strPriceVariation != null ">
+                                                    ({{item?.strPriceVariation}})
+                                                </p>
+                                                <p class="od-product-amount_pam">
+                                                    AED
+                                                    <b class="od-product-price_ppe">
+                                                        {{item?.intTotalAmount?.toFixed(2)}}
+                                                    </b>
+                                                </p>
+                                                <div class="order-details_1">
+                                                    <p class="">
+                                                        <b>Order Status : </b> <b class="od-orderID_odID
+                                                      text-{{
+                                                        objOrderDetails?.strOrderStatus === 'CANCELLED' ? 'danger' :objOrderDetails?.strOrderStatus === 'RETURNED' ? 'warning' : 'success'
+                                                      }}">{{objOrderDetails?.strOrderStatus}}</b>
+                                                    </p>
+                                                    <!-- {{'OrderDetails.OrderStatus' | translate}} -->
+
+                                                </div>
+                                            </div>
+                                            <div class="orderdetails-image_odI">
+                                                <img src="{{item?.strImagUrl[0]?.imageUrl}}"
+                                                    class="img-fluid card-img_od p-2 mx-auto" alt="" (error)="errorImage($event)">
+                                            </div>
+                                        </div>
+
+                                        <hr class="hr">
+
+                                    </div>
+
+                                    <div class="orderdetails-card_2">
+                                        <p class="orderdetails-deliveryhead_odDH">
+                                            Delivery Address
+                                        </p>
+
+                                        <hr class="hr">
+
+                                        <p class="orderdetails-deliveryAddress_odDA">
+                                            {{objOrderDetails?.arrayAddress[0]?.strFullName}}
+                                            <!-- <br>
+                                            {{objOrderDetails?.arrayAddress[0]?.strName}} -->
+                                            <br>
+                                            Address :
+                                            {{objOrderDetails?.arrayAddress[0]?.strAddress}},
+                                            <!-- {{'OrderDetails.Address' | translate}} -->
+                                            <br>
+                                            Mobile :
+                                            {{objOrderDetails?.arrayAddress[0]?.strMobileNumber}}
+                                            <!-- {{'OrderDetails.Mobile' | translate}} -->
+                                        </p>
+                                    </div>
+
+                                    <hr class="hr">
+
+                                    <div class="orderdetails-card_3">
+                                        <p class="orderdetails-paymentTypeHd_odPTH">
+                                            Payment Type
+                                        </p>
+                                        <!-- {{'OrderDetails.PaymentType' | translate}} -->
+
+                                        <hr class="hr">
+
+                                        <p class="orderdetails-paymentType_odPT">
+                                            {{objOrderDetails?.strPaymentMode}} <img
+                                                src="assets/images/icons/payment.svg" class="img-fluid ml-4" width="22"
+                                                height="22" alt="">
+                                        </p>
+                                    </div>
+
+                                    <hr class="hr">
+
+                                    <div class="orderdetails-card_4">
+                                        <p class="orderdetails-priceDetails_odPD">
+                                            Price Details
+                                        </p>
+                                        <!-- {{'OrderDetails.PriceDetails' | translate}} -->
+                                        <hr class="hr">
+
+                                        <div class="orderdetails-subTotal_odST">
+                                            <p class="od-subTotalHead_odSTH">
+                                                Sub Total
+                                            </p>
+                                            <!-- {{'OrderDetails.SubTotal' | translate}} -->
+                                            <p class="od-subTotalPrice_odSTP">
+                                                AED
+                                                <b class="subTotal-price_stp">
+                                                    {{objOrderDetails?.intSubTotal?.toFixed(2)}}
+                                                </b>
+                                            </p>
+                                        </div>
+
+                                        <div class="orderdetails-subTotal_odST" *ngIf="objOrderDetails?.intDiscount">
+                                            <p class="od-subTotalHead_odSTH">
+                                                Discount
+                                            </p>
+                                            <!-- {{'OrderDetails.Discount' | translate}} -->
+                                            <p class="od-deliveryChargePrice_odDCP">
+                                                AED
+                                                <b class="deliveryCharge-price_dcp">
+                                                    {{objOrderDetails?.intDiscount}}
+                                                </b>
+                                            </p>
+                                        </div>
+
+                                        <div class="orderdetails-subTotal_odST"
+                                            *ngIf="objOrderDetails?.intRewardPointsRedeemed">
+                                            <p class="od-subTotalHead_odSTH">
+                                                Rewards Redeemed
+                                            </p>
+                                            <!-- {{'OrderDetails.RewardsRedeemed' | translate}} -->
+                                            <p class="od-deliveryChargePrice_odDCP">
+                                                - AED
+                                                <b class="deliveryCharge-price_dcp">
+                                                    {{objOrderDetails?.intRewardPointsRedeemed}}
+                                                </b>
+                                            </p>
+                                        </div>
+
+                                        <div class="orderdetails-subTotal_odST">
+                                            <p class="od-subTotalHead_odSTH">
+                                                Delivery Charge
+                                            </p>
+                                            <!-- {{'OrderDetails.DeliveryCharge' | translate}} -->
+                                            <p class="od-subTotalPrice_odSTP"
+                                                *ngIf="objOrderDetails?.intDeliveryCharge != 0">
+                                                AED
+                                                <b class="od-subTotalPrice_odSTP">
+                                                    {{objOrderDetails?.intDeliveryCharge}}
+                                                </b>
+                                            </p>
+                                            <p class="od-deliveryChargeFree_odDCF"
+                                                *ngIf="objOrderDetails?.intDeliveryCharge == 0">
+                                                Free
+                                            </p>
+                                            <!-- {{'OrderDetails.Free' | translate}} -->
+                                        </div>
+
+                                        <hr class="hr">
+
+                                        <div class="orderdetails-totalAmount_odTA">
+                                            <p class="od-totalAmountHead_odTAH">
+                                                Total Amount
+                                            </p>
+                                            <!-- {{'OrderDetails.TotalAmount' | translate}} -->
+                                            <p class="od-totalAmountPrice_odTAP">
+                                                AED
+                                                <b class="totalAmount-price_tap">
+                                                    {{objOrderDetails?.intGrandTotal?.toFixed(2)}}
+                                                </b>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <ngx-spinner bdColor="rgba(213,208,208,0.8)" size="medium" color="#fff"></ngx-spinner>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="desktop-view">
+    <div class="container" style="flex-direction: column;">
+        <div class="divider" style="border-color: rgb(74, 65, 42);"></div>
+        <div style="text-align: right; margin-right :30px">
+            <img src="assets/images/Retro-Logo.png" width="250">
+        </div>
+    </div>
+</div>

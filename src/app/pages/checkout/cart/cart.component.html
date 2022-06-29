@@ -1,0 +1,492 @@
+<div class="loader loaded">
+    <div id="perspective" class="perspective effect-airbnb modalview mob-container animate">
+        <div class="main-wrapper">
+            <div class="main-content">
+                <div class="modal-header fixed-top">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        <b>My Cart</b>
+                    </h5>
+                    <a href="/home" class="more-btn blackbtn">
+                        <i class="ti-arrow-left"></i>
+                        back to home
+                    </a>
+                </div>
+                <div class="checkout-body">
+                    <div class="app-body single-item p-0 mt-50 form-wrap">
+                        <div class="col-sm-12">
+                            <div class="text-left pos-top">
+                                <!-- <h4 class="titleText text-left mt-4 mb-2 text-center"><strong>My Cart</strong></h4> -->
+                            </div>
+                            <div class="">
+                                <div class="pt-4">
+                                    <div class="bs-stepper modal-safety-padding linear">
+                                        <div class="bs-stepper-header" role="tablist">
+                                            <!-- your steps here -->
+                                            <div class="step active" data-target="#logins-part">
+                                                <button type="button" class="step-trigger" role="tab"
+                                                    aria-controls="logins-part" id="logins-part-trigger"
+                                                    aria-selected="true">
+                                                    <span class="bs-stepper-circle">1</span>
+                                                    <!--     <span class="bs-stepper-label" >Cart</span> -->
+                                                </button>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="step" data-target="#coupon-part">
+                                                <button type="button" class="step-trigger" role="tab"
+                                                    aria-controls="coupon-part" id="coupon-part-trigger"
+                                                    aria-selected="false" disabled="disabled">
+                                                    <span class="bs-stepper-circle">2</span>
+                                                    <!--  <span class="bs-stepper-label">Confirm </span> -->
+                                                </button>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="step" data-target="#information-part">
+                                                <button type="button" class="step-trigger" role="tab"
+                                                    aria-controls="information-part" id="information-part-trigger"
+                                                    aria-selected="false" disabled="disabled">
+                                                    <span class="bs-stepper-circle">3</span>
+                                                    <!-- <span class="bs-stepper-label">Checkout </span> -->
+                                                </button>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="step" data-target="#final">
+                                                <button type="button" class="step-trigger" role="tab"
+                                                    aria-controls="final" id="final-trigger" aria-selected="false"
+                                                    disabled="disabled">
+                                                    <span class="bs-stepper-circle"><i class="ti-check"></i></span>
+                                                    <!-- <span class="bs-stepper-circle">4</span> -->
+                                                    <!--   <span class="bs-stepper-label">Enjoy </span> -->
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="bs-stepper-content" *ngIf="intCartItemCount > 0">
+                                            <div id="logins-part" class="content fade active dstepper-block"
+                                                role="tabpanel" aria-labelledby="logins-part-trigger">
+                                                <div class="cart">
+                                                    <form [formGroup]="frmServiceMode">
+                                                        <div class="app-body pt-3 pos-top form" id="modeBlock">
+                                                            <h3 id="validmode" class="text-left">Service Mode</h3>
+
+
+                                                            <ul class="menu-item list-inline tooltrip-div text-center">
+                                                                <li class="list-inline-item p-3 ">
+
+                                                                    <div class="md-radio">
+                                                                        <input id="1" class="form-control" type="radio"
+                                                                            (change)="onSelectServiceMode()"
+                                                                            value="Delivery"
+                                                                            formControlName="rdbServiceMode"
+                                                                            name="rdbServiceMode">
+                                                                        <label for="1">Delivery</label>
+                                                                    </div>
+
+                                                                    <div class="md-radio">
+                                                                        <input id="2" class="form-control" type="radio"
+                                                                            (change)="onSelectServiceMode()"
+                                                                            value="Takeaway"
+                                                                            formControlName="rdbServiceMode"
+                                                                            name="rdbServiceMode">
+                                                                        <label for="2">Takeaway</label>
+                                                                    </div>
+
+                                                                    <div class="md-radio">
+                                                                        <input id="3" class="form-control" type="radio"
+                                                                            (change)="onSelectServiceMode()"
+                                                                            value="DineIn"
+                                                                            formControlName="rdbServiceMode"
+                                                                            name="rdbServiceMode">
+                                                                        <label for="3">Dine-In</label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+
+                                                            <div class="dine-in"
+                                                                *ngIf="frmServiceMode.value.rdbServiceMode == 'DineIn'">
+                                                                <form [formGroup]="frmDineInInput">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12">
+                                                                            <div class="form-group">
+                                                                                <select class="form-control box"
+                                                                                    formControlName="rdbDepartment" (change)="onChangeDineInItem($event)">
+                                                                                    <option value="">Select a table
+                                                                                    </option>
+                                                                                    <option
+                                                                                        *ngFor="let objDineIn of arrayOfObjDineInList"
+                                                                                        [value]="objDineIn?.pkDineInId"
+                                                                                        >
+                                                                                        {{ objDineIn?.strName }}
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+
+
+
+                                                            <div id="minReminder">
+                                                                <h6 class="text-center"
+                                                                    *ngIf="frmServiceMode.value.rdbServiceMode == 'Delivery'">
+                                                                    <i>Minimum Order For A Free Delivery is AED
+                                                                        <strong>250</strong>
+                                                                    </i>
+                                                                </h6>
+                                                                <!-- <h5 id="freeDeliveryQualified" class="text-center" *ngIf="frmServiceMode.value.rdbServiceMode == 'Delivery' && intSubTotal > 250">
+                                                                    &nbsp;</h5> -->
+                                                                <h5 id="freeDeliveryQualified" class="text-center"
+                                                                    *ngIf="frmServiceMode.value.rdbServiceMode == 'Delivery' && intSubTotal >= 250">
+                                                                    <span class="text-green">
+                                                                        You Are <strong>Qualified</strong> For
+                                                                        <strong>Free Delivery!!!</strong>
+                                                                    </span>
+                                                                </h5>
+                                                            </div>
+                                                            <hr>
+                                                        </div>
+
+                                                    </form>
+
+
+                                                    <div id="cartItems">
+                                                        <div class="col-sm-12 mt-0 list-item pl-0 pr-0 d-flex"
+                                                            *ngFor="let objItem of arrCart">
+                                                            <figure class="mr-2"><a><img
+                                                                        src="{{objItem?.arrayProductDetails[0]?.arrayThumbnail[0]?.imageUrl}}"
+                                                                        alt="image" (error)="errorImage($event)"></a>
+                                                            </figure>
+                                                            <div class="content-div mr-3">
+                                                                <h4 class="text-product mb-2">
+                                                                    {{objItem?.arrayProductDetails[0]?.strProductName}}
+                                                                    <span *ngIf="objItem?.strVariation">({{objItem?.strVariation}}) </span>
+                                                                    &nbsp;
+                                                                </h4>
+                                                                <!-- <h5>1 X  35 = 35 </h5> -->
+                                                                <span>
+                                                                    <!-- 	<input type="number" min="0" step="1"  value="1" onchange="cart.updateCartItem(50, this.value);" data-step-max="1" max="100"> -->
+
+
+                                                                    <!-- <input id="input" type="number" value="1" onchange="cart.updateCartItem(50, this.value);" min="0" max="140" > -->
+
+                                                                    <div class="item-price-total">
+                                                                        <span class="item-qty">{{objItem?.intQuantity}}
+                                                                        </span>
+                                                                        <strong> X </strong>
+                                                                        {{(objItem?.arrayProductDetails[0]?.intSellingPrice
+                                                                        + objItem?.intPrice).toFixed(2)}} =
+                                                                        {{((objItem?.arrayProductDetails[0]?.intSellingPrice
+                                                                        +
+                                                                        objItem?.intPrice)*(objItem?.intQuantity)).toFixed(2)}}
+                                                                        &nbsp;&nbsp;
+                                                                        <button
+                                                                            (click)="clearCartItem(objItem?.fkProductId, objItem?.strVariation)"
+                                                                            class="cart-del"><i
+                                                                                class="ti-trash text-red"></i>
+                                                                        </button>
+                                                                    </div>
+
+                                                                </span>
+
+
+                                                            </div>
+                                                            <div class="quantity">
+                                                                <!-- <input type="hidden"
+                                                                    onchange="cart.updateCartItem(50, this.value);"
+                                                                    min="0" max="140" value="1"> -->
+                                                                <div class="quantity-nav">
+                                                                    <div class="quantity-button quantity-up"
+                                                                        (click)="incrementCart(objItem?.fkProductId, objItem?.strVariation)">
+                                                                        +</div>
+                                                                    <div class="quantity-button quantity-down"
+                                                                        (click)="decrementCart(objItem?.fkProductId, objItem?.strVariation)">
+                                                                        -</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <hr>
+
+                                                    <div id="cartCalc" style="display: block;">
+
+                                                        <div class="bill pt-2">
+                                                            <p class="bill-details">Bill Details <span
+                                                                    class="total-item-count"
+                                                                    *ngIf="intCartItemCount >= 0">(
+                                                                    {{ intCartItemCount }}
+                                                                    <span class="item-word"
+                                                                        *ngIf="intCartItemCount > 1">items</span>
+                                                                    <span class="item-word"
+                                                                        *ngIf="intCartItemCount == 1">item</span>
+                                                                    )</span></p>
+                                                        </div>
+
+                                                        <div class="table-content table-responsive mb--30">
+                                                            <table class="table order-table order-table-1">
+
+                                                                <tfoot>
+                                                                    <tr class="cart-subtotal total-calc">
+                                                                        <th><span id="ieTitle">Item Subtotal</span><span> ( VAT excluded )</span>
+                                                                        </th>
+                                                                        <td class="text-right">AED <strong
+                                                                                id="totalPrice">{{intSubTotalWithoutVAT.toFixed(2)}}</strong>
+                                                                        </td>
+                                                                    </tr>
+
+
+
+                                                                    <tr class="shipping total-calc ">
+                                                                        <th><span id="taxTitle">VAT Incl. </span>(
+                                                                            <strong id="taxValue">5</strong>%)
+                                                                        </th>
+                                                                        <td class="text-right">
+                                                                            AED <strong id="taxAmount">{{(intSubTotal - intSubTotalWithoutVAT).toFixed(2)}}</strong>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr class="shipping total-calc" id="deliveryBlock"
+                                                                        *ngIf="frmServiceMode.controls.rdbServiceMode.value === 'Delivery' && intSubTotal < 250">
+                                                                        <th>Delivery Fee</th>
+                                                                        <td class="text-right">
+                                                                            AED <strong
+                                                                                id="deliveryFee">{{intDeliveryCharge}}</strong>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr class="shipping total-calc" id="deliveryBlock"
+                                                                        *ngIf="frmServiceMode.controls.rdbServiceMode.value === 'Delivery' && intSubTotal > 250">
+                                                                        <th>Delivery Fee</th>
+                                                                        <td class="text-right">
+                                                                            <strong id="deliveryFree">Free</strong>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr class="shipping total-calc" id="serviceBlock"
+                                                                        style="display: none;">
+                                                                        <th>Service Charge</th>
+                                                                        <td class="text-right">
+                                                                            AED <strong id="serviceCharge">0</strong>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                    <tr class="order-total grand-total">
+                                                                        <th>Bill Total</th>
+                                                                        <td class="text-right">
+                                                                            <span class="order-total-ammount">AED
+                                                                                <strong
+                                                                                    id="grandTotal">{{intGrandTotal.toFixed(2)}}</strong>
+                                                                            </span>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                </tfoot>
+                                                            </table>
+                                                            <!-- <button mat-raised-button (click)="openDialog()"
+                                                                type="button"
+                                                                class="btn  btn-success addCoupon mb-3 pull-right">
+                                                                <i class="ti-gift mr-2 "></i>
+                                                                Add Coupon Code
+                                                            </button> -->
+                                                        </div>
+
+                                                        <hr>
+
+                                                        <div class="text-center " style="margin-bottom: 35px;">
+                                                            <!-- <a routerLink="/home" class="btn  btn-outline-success ">
+                                                                <i class="ti-arrow-left mr-2 " data-dismiss="modal"></i>
+                                                                back to home
+                                                            </a> -->
+
+                                                            <button type="button" (click)="clearCartItem(id, variant)"
+                                                                class="btn  btn-warning" style="color: #fff;"
+                                                                id="clear">
+                                                                <i class=" ti-brush-alt mr-2 "></i>Clear Cart
+                                                            </button>
+                                                        </div>
+
+                                                        <div class="static-content">
+                                                            <!-- <div class="one">
+                                                                <img src="assets/images/non_toxic.png" class="pr-1"
+                                                                    width="50" height="50" alt="">
+                                                                <p class="">Chemical Free</p>
+                                                            </div>
+                                                            <div class="two">
+                                                                <img src="assets/images/fresh.png" class="pr-1"
+                                                                    width="50" height="50" alt="">
+                                                                <p class="">Fresh</p>
+                                                            </div>
+                                                            <div class="three">
+                                                                <img src="assets/images/hygiene.png" class="pr-1"
+                                                                    width="50" height="50" alt="">
+                                                                <p class="">Hygiene</p>
+                                                            </div> -->
+                                                            <img src="assets/images/logos jpg.jpg" alt="">
+                                                        </div>
+
+                                                        <div class="fixed-cta-btn ">
+                                                            <div class="row">
+                                                                <div class="col-sm-6 p-0">
+                                                                    <a class="cart-item-count btn-white btn btn-lg w-100"
+                                                                        *ngIf="intCartItemCount >= 0">
+
+                                                                        {{ intCartItemCount }}
+                                                                        <span class="item-word"
+                                                                            *ngIf="intCartItemCount > 1">items
+                                                                        </span>
+                                                                        <span class="item-word"
+                                                                            *ngIf="intCartItemCount == 1">item
+                                                                        </span>
+                                                                        <span class="px-1">|</span>
+                                                                        <span class="order-total-ammount pl-1">AED
+                                                                            <strong
+                                                                                id="grandTotal">{{intGrandTotal.toFixed(2)}}</strong>
+                                                                        </span>
+                                                                    </a>
+
+                                                                </div>
+                                                                <div class="col-sm-6 p-0">
+                                                                    <a class=" confirmOrder btn-success fw-600 next-tour btn btn-lg  text-center w-100 text-white"
+                                                                        (click)="onClickNavigateOrderSummary()">
+                                                                        <i class="fa fa-shopping-bag mr-2"></i>
+                                                                        Checkout
+                                                                        <i class="ti-angle-right ml-2"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- <p class="note mt-4 " style="margin-bottom: 35px;">
+                                                        <strong>Note :</strong>
+                                                        <i>If you are looking for <strong>DineIn or Room Service
+                                                            </strong>option please </i>
+                                                        <a routerLink="/scan" class="">
+                                                            <img src="assets/images/qr_img.png" width="20">
+                                                            <span style="vertical-align: middle;">Scan the QR
+                                                                code</span>
+                                                        </a>
+                                                        on your table Or room
+                                                    </p> -->
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="cartItems" *ngIf="intCartItemCount == 0">
+                                            <div class="text-center mb-10 mt-10"><img src="assets/images/zero_cart.png">
+                                                <h4>Your cart is empty</h4>
+                                                <p>Looks like you haven't made your choice yet</p>
+                                                <button type="button" routerLink="/home"
+                                                    class="btn btn-warning mr-1 mb-2" data-dismiss="modal">BACK TO
+                                                    STORE</button>
+                                            </div>
+                                        </div>
+                                        <!-- <p class="note mt-4 " style="margin-bottom: 35px;" *ngIf="intCartItemCount == 0">
+                                            <strong>Note :</strong>
+                                            <i>If you are looking for <strong>DineIn or Room Service
+                                                </strong>option please </i>
+                                            <a routerLink="/scan" class="">
+                                                <img src="assets/images/qr_img.png" width="20">
+                                                <span style="vertical-align: middle;">Scan the QR
+                                                    code</span>
+                                            </a>
+                                            on your table Or room
+                                        </p> -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="desktop-view">
+    <div class="container" style="flex-direction: column;">
+        <div class="divider" style="border-color: rgb(74, 65, 42);"></div>
+        <div style="text-align: right; margin-right :30px">
+            <img src="assets/images/Retro-Logo.png" width="250">
+        </div>
+    </div>
+</div>
+
+
+<!-- <ng-template #summary let-modal>
+
+    <div class="modal-header fixed-top">
+        <h5 class="modal-title" id="exampleModalLongTitle">
+            <b>Checkout</b>
+        </h5>
+        <a href="/home" class="more-btn blackbtn">
+            <i class="ti-arrow-left"></i>
+            back to home
+        </a>
+    </div>
+
+    <div class="modal-body">
+        <div class="checkout-body">
+            <div class="app-body single-item p-0 mt-50 form-wrap">
+                <div class="col-sm-12">
+                    <div class="text-left pos-top">
+                        
+                    </div>
+                    <div class="">
+                        <div class="pt-4">
+                            <div class="bs-stepper modal-safety-padding linear">
+                                <div class="bs-stepper-header" role="tablist">
+                                    
+                                    <div class="step active" data-target="#logins-part">
+                                        <button type="button" class="step-trigger" role="tab"
+                                            aria-controls="logins-part" id="logins-part-trigger" aria-selected="true">
+                                            <span class="bs-stepper-circle">1</span>
+                                            
+                                        </button>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="step" data-target="#coupon-part">
+                                        <button type="button" class="step-trigger" role="tab"
+                                            aria-controls="coupon-part" id="coupon-part-trigger" aria-selected="false"
+                                            disabled="disabled">
+                                            <span class="bs-stepper-circle">2</span>
+                                            
+                                        </button>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="step" data-target="#information-part">
+                                        <button type="button" class="step-trigger" role="tab"
+                                            aria-controls="information-part" id="information-part-trigger"
+                                            aria-selected="false" disabled="disabled">
+                                            <span class="bs-stepper-circle">3</span>
+                                            
+                                        </button>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="step" data-target="#final">
+                                        <button type="button" class="step-trigger" role="tab" aria-controls="final"
+                                            id="final-trigger" aria-selected="false" disabled="disabled">
+                                            <span class="bs-stepper-circle"><i class="ti-check"></i></span>
+        
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="bs-stepper-content">
+                                    <app-order-summary></app-order-summary>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</ng-template> -->

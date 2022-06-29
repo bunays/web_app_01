@@ -1,0 +1,253 @@
+<div class="loader loaded">
+    <div id="perspective" class="perspective effect-airbnb modalview mob-container animate">
+        <div class="main-wrapper">
+            <div class="main-content">
+                <div class="modal-header fixed-top">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        <b>Checkout</b>
+                    </h5>
+                    <a href="/home" class="more-btn blackbtn">
+                        <i class="ti-arrow-left"></i>
+                        back to home
+                    </a>
+                </div>
+                <div class="checkout-body">
+                    <div class="app-body single-item p-0 mt-50 form-wrap">
+                        <div class="col-sm-12">
+                            <div class="text-left pos-top">
+                                <!-- <h4 class="titleText text-left mt-4 mb-2 text-center"><strong>My Cart</strong></h4> -->
+                            </div>
+                            <div class="">
+                                <div class="pt-4">
+                                    <div class="bs-stepper modal-safety-padding linear">
+                                        <div class="bs-stepper-header" role="tablist">
+                                            <!-- your steps here -->
+                                            <div class="step" data-target="#logins-part">
+                                                <button type="button" class="step-trigger" role="tab"
+                                                    aria-controls="logins-part" id="logins-part-trigger"
+                                                    aria-selected="true">
+                                                    <span class="bs-stepper-circle">1</span>
+                                                    <!--     <span class="bs-stepper-label" >Cart</span> -->
+                                                </button>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="step active" data-target="#coupon-part">
+                                                <button type="button" class="step-trigger" role="tab"
+                                                    aria-controls="coupon-part" id="coupon-part-trigger"
+                                                    aria-selected="false" disabled="disabled">
+                                                    <span class="bs-stepper-circle">2</span>
+                                                    <!--  <span class="bs-stepper-label">Confirm </span> -->
+                                                </button>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="step" data-target="#information-part">
+                                                <button type="button" class="step-trigger" role="tab"
+                                                    aria-controls="information-part" id="information-part-trigger"
+                                                    aria-selected="false" disabled="disabled">
+                                                    <span class="bs-stepper-circle">3</span>
+                                                    <!-- <span class="bs-stepper-label">Checkout </span> -->
+                                                </button>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div class="step" data-target="#final">
+                                                <button type="button" class="step-trigger" role="tab"
+                                                    aria-controls="final" id="final-trigger" aria-selected="false"
+                                                    disabled="disabled">
+                                                    <span class="bs-stepper-circle"><i class="ti-check"></i></span>
+                                                    <!-- <span class="bs-stepper-circle">4</span> -->
+                                                    <!--   <span class="bs-stepper-label">Enjoy </span> -->
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="bs-stepper-content px-0">
+
+                                            <div id="coupon-part" class="content fade dstepper-block active"
+                                                role="tabpanel" aria-labelledby="coupon-part-trigger">
+                                                <div class="">
+
+                                                    <!-- <div id="reviewCoupon">&nbsp; </div> -->
+                                                    <div id="reviewOrder">
+                                                        <div class=" mt-2 mb-4">
+                                                            <div class="card-body pt-3">
+                                                                <h2>Order Summary <span style="font-size: 14px; color: #5f5f5f;">({{cartSummary[0]?.strServiceMode}})</span> 
+                                                                </h2>
+                                                                <ul class="chat-list">
+                                                                    <li class="chat-list-item"
+                                                                        *ngFor="let item of arrCart">
+                                                                        <div class="list-body main">
+                                                                            <div class="img-desc">
+                                                                                <figure class="mr-2 mb-0">
+                                                                                    <a>
+                                                                                        <img src="{{item?.arrayProductDetails[0]?.arrayThumbnail[0]?.imageUrl}}"
+                                                                                            alt="image"
+                                                                                            (error)="errorImage($event)">
+                                                                                    </a>
+                                                                                </figure>
+                                                                                <div class="chat-bttn">
+                                                                                    <h3 class="mb-0 mt-2">
+                                                                                        {{item?.arrayProductDetails[0]?.strProductName}}
+                                                                                        <span
+                                                                                            *ngIf="item?.strVariation">-
+                                                                                            {{item?.strVariation}}</span>
+                                                                                        <!-- <strong>X
+                                                                                            {{item?.intQuantity}}</strong> -->
+                                                                                    </h3>
+                                                                                    <p>Qty: {{item?.intQuantity}}</p>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div
+                                                                                class="list-action mt-2 justify-content-end text-right">
+                                                                                <div class="price-section">AED
+                                                                                    {{(item?.intQuantity*(item?.arrayProductDetails[0]?.intSellingPrice
+                                                                                    + item?.intPrice)).toFixed(2)}}
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="chat-list-item numb-1">
+                                                                        <div class="list-body">
+                                                                            <div class="chat-bttn">
+                                                                                <h3 class="mb-0 mt-2"><strong> Item
+                                                                                        Subtotal</strong>
+                                                                                        <span> ( VAT excluded )</span>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="list-action mt-2 text-right">
+                                                                                <h3>AED <strong>{{(cartSummary[0]?.intSubTotal / (1 + ( 5 / 100))
+                                                                                       ).toFixed(2)}}</strong>
+                                                                                </h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="chat-list-item numb-1">
+                                                                        <div class="list-body">
+                                                                            <div class="chat-bttn">
+                                                                                <h3 class="mb-0 mt-2">VAT Incl.
+                                                                                    (5%)
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="list-action mt-2 text-right">
+                                                                                <h3> AED {{(cartSummary[0]?.intSubTotal - (cartSummary[0]?.intSubTotal / (1 + ( 5 / 100))
+                                                                                    )).toFixed(2)}}
+                                                                                </h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="chat-list-item numb-1">
+                                                                        <div class="list-body">
+                                                                            <div class="chat-bttn">
+                                                                                <h3 class="mb-0 mt-2"><strong>Cart
+                                                                                        Subtotal</strong>
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="list-action mt-2 text-right">
+                                                                                <h3>AED
+                                                                                    <strong>{{cartSummary[0]?.intSubTotal.toFixed(2)}}</strong>
+                                                                                </h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="chat-list-item numb-1">
+                                                                        <div class="list-body">
+                                                                            <div class="chat-bttn">
+                                                                                <h3 class="mb-0 mt-2">
+                                                                                    <span class="fail">
+                                                                                        Discount
+                                                                                    </span>
+                                                                                    &nbsp;
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="list-action mt-2 text-right">
+                                                                                <h3> 
+                                                                                    <span class="fail">
+                                                                                        AED {{cartSummary[0]?.intDiscount.toFixed(2)}}
+                                                                                    </span>
+                                                                                </h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <!-- <a class=" addCoupon btn  btn-success text-white" (click)="openDialog()">
+                                                                        <i class="ti-gift mr-2 "></i>
+                                                                        Add Coupon
+                                                                    </a> -->
+                                                                    <li class="chat-list-item numb-1"
+                                                                        *ngIf="cartSummary[0].strServiceMode === 'Delivery' && cartSummary[0]?.intSubTotal < 250">
+                                                                        <div class="list-body">
+                                                                            <div class="chat-bttn">
+                                                                                <h3 class="mb-0 mt-2">Delivery
+                                                                                    Fee</h3>
+                                                                            </div>
+                                                                            <div class="list-action mt-2 text-right">
+                                                                                <h3>AED
+                                                                                    {{cartSummary[0]?.intDeliveryCharge.toFixed(2)}}
+                                                                                </h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="chat-list-item numb-1"
+                                                                        *ngIf="cartSummary[0].strServiceMode === 'Delivery' && cartSummary[0]?.intSubTotal > 250">
+                                                                        <div class="list-body">
+                                                                            <div class="chat-bttn">
+                                                                                <h3 class="mb-0 mt-2">Delivery
+                                                                                    Fee</h3>
+                                                                            </div>
+                                                                            <div
+                                                                                class="list-action-free mt-2 text-right">
+                                                                                <h3>Free</h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="chat-list-item numb-1">
+                                                                        <div class="list-body">
+                                                                            <div class="chat-bttn">
+                                                                                <h2 class="mb-0 mt-2 grand-total">Total Amount</h2>
+                                                                            </div>
+                                                                            <div class="list-action mt-2 text-right">
+                                                                                <h2 class="grand-total">AED {{cartSummary[0]?.intGrandTotal.toFixed(2)}}
+                                                                                </h2>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-center">
+                                                        <!-- <button type="button" class="btn  btn-outline-dark addCoupon" ><i class="ti-gift mr-2 "></i> Update Coupon</button>	 -->
+
+                                                        <button type="button" class="btn btn-warning toCart" style="color: #fff; border-radius: 25px;"
+                                                            (click)="onClickNavigateCart()">
+                                                            <i class="ti-shopping-cart-full mr-2 "></i>
+                                                            Edit Cart
+                                                        </button>
+                                                    </div>
+                                                    <div class="fixed-cta-btn ">
+                                                        <button type="button"
+                                                            class="btn-success toCheckout fw-600  next-tour btn btn-lg  text-center w-100 text-white"
+                                                            (click)="onClickNavigatePlaceOrder()">Add Address & Choose payment <i
+                                                            class="ti-angle-right mr-1"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="desktop-view">
+    <div class="container" style="flex-direction: column;">
+        <div class="divider" style="border-color: rgb(74, 65, 42);"></div>
+        <div style="text-align: right; margin-right :30px">
+            <img src="assets/images/Retro-Logo.png" width="250">
+        </div>
+    </div>
+</div>

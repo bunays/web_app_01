@@ -1,0 +1,20 @@
+<div id="wrapper">
+    <div class="content-page">
+
+        <!-- <mat-sidenav-container class="example-container" (backdropClick)="onBackDropClickClose()" autosize>
+            <mat-sidenav #leftSidenav [style.margin-top.px]="numHeaderHeight" mode="over"
+                opened={{objLeftSideNavEnable$.isVisible}} [fixedInViewport]="true">
+                <app-product-details *ngIf="objLeftSideNavEnable$.type === 'ProductDetails'"></app-product-details>
+            </mat-sidenav>
+        </mat-sidenav-container> -->
+
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+
+
+        <!-- <app-edit-profile-address *ngIf="objLeftSideNavEnable$.type === 'ProfileAddress'">
+                </app-edit-profile-address> -->
+    </div>
+
+</div>

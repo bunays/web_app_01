@@ -1,0 +1,62 @@
+.mat-drawer {
+  background-color: white;
+}
+.mat-drawer-container {
+  overflow: visible;
+}
+.mat-drawer-backdrop {
+  height: 100vh;
+  width: 500px;
+  background-color: blanchedalmond;
+}
+.mat-drawer-container {
+  position: unset !important;
+}
+.mat-sidenav-container {
+  position: unset !important;
+}
+.example-container {
+  background-color: white;
+  overflow-x: hidden;
+  // height: 100vh;
+  // width: 500px;
+}
+::ng-deep .mat-drawer-transition .mat-drawer-backdrop {
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: background-color,visibility;
+}
+
+// ::ng-deep .ng-star-inserted{
+//     overflow-x: hidden;
+//     overflow-y: hidden;
+
+// }
+
+::ng-deep .mat-drawer-inner-container {
+  overflow: visible !important;
+}
+
+.wrapper {
+  overflow-x: hidden;
+}
+// @media only screen and (min-width: 551px) {
+//   .content {
+//     margin-top: 97px !important;
+//   }
+// }
+// @media only screen and (max-width: 550.99px) {
+//   .content {
+//     margin-top: 77.5px !important;
+//   }
+// }
+// @media only screen and (max-width: 300.99px) {
+//   .content {
+//     margin-top: 77px !important;
+//   }
+// }
+// @media only screen and (max-width: 268.99px) {
+//   .content {
+//     margin-top: 117px !important;
+//   }
+// }

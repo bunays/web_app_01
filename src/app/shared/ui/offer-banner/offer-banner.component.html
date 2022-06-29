@@ -1,0 +1,7 @@
+<div class="top-banner mb2 single-item">
+    <ngb-carousel>
+        <ng-template ngbSlide class="carouselImg" *ngFor="let offerBanImg of arrayOfOfferBannerImages">
+            <img [src]="offerBanImg?.strImageUrl" alt="first slide" class="d-block img-fluid pointer" (error)="errorImage($event)"/>
+        </ng-template>
+    </ngb-carousel>
+</div>

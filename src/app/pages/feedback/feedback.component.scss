@@ -1,0 +1,132 @@
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+}
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99999;
+  background: #fff;
+}
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+h5 {
+  font-size: 17px;
+  font-weight: 400;
+}
+.blackbtn {
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+.feedback-page .modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 0;
+  margin-top: 56px;
+}
+#addFeedback {
+  margin-top: 20px;
+}
+.qblock {
+  margin: 5px 0 10px 0;
+}
+#addFeedback label {
+  color: #333;
+}
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.cst-ctrl {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-height: 1.5rem !important;
+  padding-left: 0rem !important;
+  margin-right: 1.6rem !important;
+}
+label.wimg > input {
+  visibility: hidden;
+  position: absolute;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+label.wimg > input:checked + img {
+  opacity: 1;
+}
+label.wimg > input + img {
+  cursor: pointer;
+  opacity: 0.4;
+}
+.long-btn {
+  width: 112px !important;
+  height: 48px !important;
+  vertical-align: middle;
+}
+.form-check {
+  position: relative;
+  display: block;
+  padding-left: 1.25rem;
+}
+label.wimg > input {
+  visibility: hidden;
+  position: absolute;
+}
+.smiley {
+  width: 48px !important;
+  height: 48px;
+  vertical-align: middle;
+}
+.form-control-lg {
+  height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  /* font-size: 1.25rem; */
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+//   height: calc(1.5em + 0.75rem + 2px);
+//   padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+//   line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+//   border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.w100 {
+  width: 100%;
+  max-width: 300px;
+}
+.btn-round {
+  border-radius: 100px;
+}
+.btn {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 8px 20px;
+}

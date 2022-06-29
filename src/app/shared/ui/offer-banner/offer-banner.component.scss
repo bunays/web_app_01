@@ -1,0 +1,67 @@
+.top-banner {
+  padding: 0px -15px;
+}
+ngb-carousel img {
+  width: 100%;
+  max-width: 2560px;
+  height: 200px;
+  opacity: 1;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+ngb-carousel {
+  width: inherit;
+  height: inherit;
+}
+ngb-carousel::ng-deep .carousel-control-prev {
+  position: absolute;
+  top: 0;
+  left: -17px;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  color: #000;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.15s ease;
+}
+ngb-carousel::ng-deep .carousel-control-next {
+  position: absolute;
+  top: 0;
+  right: -17px;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  color: #000;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.15s ease;
+}
+
+@media only screen and (max-width: 991px) {
+  ngb-carousel img {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  ngb-carousel img {
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  ngb-carousel img {
+    height: 320px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  ngb-carousel img {
+    height: 150px;
+  }
+}

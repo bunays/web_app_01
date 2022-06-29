@@ -1,0 +1,250 @@
+<h6 class="spl-cat-title">
+    Featured Items
+</h6>
+<div class="all-items">
+    <div class="row">
+        <div class="col-sm-6" *ngFor="let featured of arrayOfFeaturedItems">
+            <a class="showProductInfo" (click)="onClickNavigate(featured)">
+                <div class="item list-item-full  pl-0 pr-0">
+                    <figure class="mb-0"><img [src]="featured?.arrayThumbnail[0]?.imageUrl" (error)="errorImage($event)"></figure>
+                    <!-- <div class="content-div">
+                        <h5 class="fw-600 text-white pull-left mb-1">
+                            #239
+                        </h5>
+                    </div> -->
+                    <div class="bg-price price">
+                        <!-- AED -->
+                        <span>
+                            <!-- <del class="red-color">
+                                50
+                            </del> -->
+                            AED
+                            {{featured?.intMRP}}
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <h4 class="">
+               {{featured?.strProductName}}
+            </h4>
+            <del class="strike-color" *ngIf="featured?.intMRP > featured?.intSellingPrice">
+                AED {{featured?.intMRP}}
+            </del>
+        </div>
+        <!-- <div class="col-sm-6">
+            <a data-id="36" class="showProductInfo">
+                <div class="item list-item-full  pl-0 pr-0">
+                    <figure class="mb-0"><img src="assets/images/thumb_TIJARA10365824022022.jpg"></figure>
+                    <div class="content-div">
+                        <h5 class="fw-600 text-white pull-left mb-1">
+                            #241
+                        </h5>
+                    </div>
+                    <div class="bg-price price">
+                        AED
+                        <span>
+                            25
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <h4 class="">
+                Avocado Milk Shake
+            </h4>
+        </div>
+        <div class="col-sm-6">
+            <a data-id="36" class="showProductInfo">
+                <div class="item list-item-full  pl-0 pr-0">
+                    <figure class="mb-0"><img src="assets/images/thumb_TIJARA10360824022022.jpg"></figure>
+                    <div class="content-div">
+                        <h5 class="fw-600 text-white pull-left mb-1">
+                            #242
+                        </h5>
+                    </div>
+                    <div class="bg-price price">
+                        AED
+                        <span>
+                            <del class="red-color">
+                                30
+                            </del>
+                            <small>AED </small>
+                            24
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <h4 class="">
+                Mango Blend
+            </h4>
+        </div>
+        <div class="col-sm-6">
+            <a data-id="36" class="showProductInfo">
+                <div class="item list-item-full  pl-0 pr-0">
+                    <figure class="mb-0"><img src="assets/images/thumb_TIJARA10351024022022.jpg"></figure>
+                    <div class="content-div">
+                        <h5 class="fw-600 text-white pull-left mb-1">
+                            #289
+                        </h5>
+                    </div>
+                    <div class="bg-price price">
+                        AED
+                        <span>
+                            32
+                        </span>
+                    </div>
+                </div>
+            </a>
+            <h4 class="">
+                Special Sandwich
+            </h4>
+        </div> -->
+    </div>
+</div>
+
+
+<ng-template #productDetails let-modal>
+    <div class="modal-body">
+        <div class="app-body single-item p-0 mt-50">
+            <a href="/home" class="close-det" data-dismiss="modal">
+                <i class="ti-arrow-left"></i>
+                back
+            </a>
+            <div class="tijara-det-slide">
+                <ngx-slick-carousel class="no-arrow" #slickModal="slick-carousel" [config]="bannerSlideConfig">
+                    <div ngxSlickItem class="text-center gradient"
+                        *ngFor="let bottomBanImg of arrayOfBottomBannerImages">
+                        <div class="sliding-logo-block pointer text-center">
+
+                            <a>
+                                <img class="mx-auto slideImg" [src]="bottomBanImg">
+                            </a>
+                        </div>
+                    </div>
+                </ngx-slick-carousel>
+            </div>
+        </div>
+        <div class="app-body single-item pr-4 pl-4 pt-0">
+            <div class="row">
+                <div class="col-sm-12 mb-0 content-div text-center">
+                    <span class="tag"> Dessert</span>
+                    <h4 class="item-title ">
+                        Special Falooda </h4>
+                    <h5 class="item-price">
+
+                    </h5>
+                    <a href="https://api.whatsapp.com/send?phone=918589049648&amp;text=Hello+%2AOrganic+Cafe%2A%2C%0A+I+would+like+to+know+more+about+this+product+%3A+%2ASpecial+Falooda+%2A++With+Product+Code+%3A+%2A0%2A"
+                        class="btn btn-round btn-success mr-1 mb-0 mt-1"><i
+                            class="f18 text-white fa fa-whatsapp mr-1"></i>WhatsApp Enquiry </a>
+                    <hr>
+
+                    <div style="margin-top : -25px;">
+
+                        <!-- <div class="product var-det text-left"
+                            data-varimage="uploads/products/thumb_TIJARA10380224022022.jpg"
+                            data-varname="Special Falooda  - Special " data-varprice="35.00" data-varid="50">
+                            <img src="uploads/products/thumb_TIJARA10380224022022.jpg" width="1" style="opacity:0">
+                            <div class="hCid hcId50">
+                                <input type="hidden" class="count cId50" value="1"
+                                    onchange="cart.updateCartItem(50, this.value);">
+                            </div>
+                            <span class="var-det-name ">Special</span><span class="var-det-price">
+                                <del class="red-color">
+                                    <small>AED</small>
+                                    50.00
+                                </del>&nbsp;
+                                <small>AED</small>
+                                35.00
+                            </span>
+                            <button class="add-to-cart pull-right var-cart tiny bId27 btn  btn-success mr-1 mb-0">
+                                <i class="text-white ti-plus mr-1"></i>
+                                Add
+                            </button>
+                        </div> -->
+
+                        <div class="product var-det text-left"
+                            data-varimage="uploads/products/thumb_TIJARA15334519102021.jpeg"
+                            data-varname="Chiceken Tikka - Full " data-varprice="55.00" data-varid="35"><img
+                                src="uploads/products/thumb_TIJARA15334519102021.jpeg" width="1" style="opacity:0">
+                            <div class="hCid hcId35">
+                                <input type="hidden" class="count cId35" value="1"
+                                    onchange="cart.updateCartItem(35, this.value);">
+                            </div>
+                            <span class="var-det-name ">Full</span>
+                            <span class="var-det-price">
+                                <small>AED</small>
+                                55.00
+                            </span>
+                            <span class=" pull-right var-cart tiny bId27 btn  btn-outline-danger mr-1 mb-0">
+                                <i class=" ti-face-sad mr-1"></i> N / A</span>
+                        </div>
+
+                        <div class="product var-det text-left"
+                            data-varimage="uploads/products/thumb_TIJARA15334519102021.jpeg"
+                            data-varname="Chiceken Tikka - Half  " data-varprice="30.00" data-varid="36"><img
+                                src="uploads/products/thumb_TIJARA15334519102021.jpeg" width="1" style="opacity:0">
+                            <div class="hCid hcId36">
+                                <input type="hidden" class="count cId36" value="1"
+                                    onchange="cart.updateCartItem(36, this.value);">
+                            </div>
+                            <span class="var-det-name ">Half </span>
+                            <span class="var-det-price">
+                                <del class="red-color">
+                                    <small>AED</small>
+                                    30.00
+                                </del>
+                                &nbsp;
+                                <small>AED</small>
+                                30.00
+                            </span>
+                            <button class="add-to-cart pull-right var-cart tiny bId27 btn  btn-success mr-1 mb-0">
+                                <i class="text-white ti-plus mr-1"></i>
+                                Add
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 mt-2 content-div " style="margin-bottom: 60px">
+                    <span class="item-subtitle desc-title mb-2 mt-2 fw-600 ">
+                        Description </span>
+                    <div class="clearfix"></div>
+                    <div class=" ">
+                        <p class="">
+                        </p>
+                    </div>
+                    <!-- <hr>
+                    <span class="item-subtitle mb-3 mt-2 fw-600">Related Products</span>
+    
+                    <a href="#" class="bg-red-gradiant fw-600 mt-2 next-tour btn btn-lg text-center w-100 text-white"><i class="ti-shopping-cart mr-2"></i>Add to order</a> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer fixed-bottom cart-det ">
+        <a href="#" class="showDetCartInfo">
+
+            <div class="text-white">
+                &nbsp; &nbsp;
+                <i class="ti-direction"></i>
+                &nbsp; &nbsp;
+                Cart Total :
+                <small>AED</small>
+                <span class="detCartTotal">
+                    147.00
+                </span>
+                &nbsp; &nbsp;
+            </div>
+
+        </a>
+        <a href="#" class="shopping-cart cart-count mt-1 nav-content-bttn nav-center showDetCartInfo">
+            <i class="ti-shopping-cart-full cart-b"></i>
+            <span id="detCartStat">
+                5
+            </span>
+        </a>
+    </div>
+</ng-template>

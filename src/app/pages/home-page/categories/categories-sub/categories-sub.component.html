@@ -1,0 +1,58 @@
+<div id="all_cat_title" class="item-header fw-600 text-black mt-0 mb-0" style="display: block;">
+    <h4 class=" ">
+        Categories
+    </h4>
+    <a href="/home" class="more-btn cat_link_menu  ">
+        <i class="ti-arrow-left"></i>
+        All Items
+    </a>
+</div>
+<div class="all-cat-list">
+    <div class="row">
+        <div class="col-sm-6" *ngFor="let cat of arrCategories">
+            <a class="cat_link" (click)="onClickCategory(cat)">
+                <div class="item list-item-full bg-gradiant-black pl-0 pr-0">
+                    <figure class="mb-0"><img [src]="cat?.strImageUrl" (error)="errorImage($event)"></figure>
+                    <div class="content-div">
+                        <h6 class="text-white fw-600 mb-0 ">{{cat?.strName}}</h6>
+                        <span class="mt-0"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- <div class="col-sm-6">
+            <a href="" class="cat_link">
+                <div class="item list-item-full bg-gradiant-black pl-0 pr-0">
+                    <figure class="mb-0"><img src="assets/images/BW08392428022021.jpg"></figure>
+                    <div class="content-div">
+                        <h6 class="text-white fw-600 mb-0 ">Sandwich</h6>
+                        <span class="mt-0"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-6">
+            <a href="" class="cat_link">
+                <div class="item list-item-full bg-gradiant-black pl-0 pr-0">
+                    <figure class="mb-0"><img src="assets/images/BW08443828022021.jpg"></figure>
+                    <div class="content-div">
+                        <h6 class="text-white fw-600 mb-0 ">Salad</h6>
+                        <span class="mt-0"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-6">
+            <a href="" class="cat_link">
+                <div class="item list-item-full bg-gradiant-black pl-0 pr-0">
+                    <figure class="mb-0"><img src="assets/images/BW08453028022021.jpg"></figure>
+                    <div class="content-div">
+                        <h6 class="text-white fw-600 mb-0 ">Juice</h6>
+                        <span class="mt-0"></span>
+                    </div>
+                </div>
+            </a>
+        </div> -->
+    </div>
+    <ngx-spinner bdColor="rgba(213,208,208,0.8)" size="medium" color="#fff"></ngx-spinner>
+</div>

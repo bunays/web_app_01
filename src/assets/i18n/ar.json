@@ -1,0 +1,438 @@
+{
+    "NavBar": {
+        "Login": "دخول",
+        "More": "أكثر",
+        "MyAccount": "الحساب",
+        "Logout": "تسجيل خروج",
+        "WhatAreYouLookingFor": "ما الذي تبحث عنه؟",
+        "NotFound": "لم يتم العثور على"
+    },
+    "ScrollingBar": {
+        "AllCategories": "جميع الفئات",
+        "NoShops": "لا توجد متاجر",
+        "NoCategoriesFound": "لا توجد فئات!",
+        "FindProducts": "البحث عن المنتجات",
+        "ViewAllCategories": "عرض جميع الفئات"
+    },
+    "Footer": {
+        "FollowUsOn": "اتبعنا:",
+        "NeedHelp": "تحتاج مساعدة؟",
+        "CallUs": "اتصل بنا",
+        "EmailUs": "ارسل لنا عبر البريد الإلكتروني",
+        "JoinOurTelegram": "الانضمام إلى قناة برقية لدينا",
+        "BeASeller": "كن بائعا",
+        "ApplyNow": "قدم الآن",
+        "ProductCategories": "فئات المنتجات",
+        "CustomersArea": "منطقة العملاء",
+        "Cart": "عربة التسوق",
+        "Policies": "سياسات",
+        "TermsConditions": "البنود و الظروف",
+        "PrivacyPolicy": "سياسة خاصة",
+        "Home": "الصفحة الرئيسية",
+        "Login": "تسجيل الدخول",
+        "Orders": "طلب",
+        "Favourites": "المفضلة",
+        "Notifications": "إشعارات",
+        "MyAccount": "الحساب",
+        "DownloadApp": "تنزيل التطبيقات"
+    },
+    "TopBar": {
+        "DeliverTo": "يسلم إلى"
+    },
+    "Advertisements": {
+        "TopProducts": "أهم المنتجات",
+        "Trending": "تتجه نايك سنيكرز",
+        "ShopNow": "تسوق الآن",
+        "NewArrivals": "القادمون الجدد",
+        "VeganFriendly": "مكياج صديق للنباتيين",
+        "BestSeller": "الأكثر مبيعا",
+        "FashionAccessories": "اكسسوارات التفاح الموضة",
+        "Services": "خدمات",
+        "OnlineServices": "24/7 خدمات عبر الإنترنت",
+        "BookNow": "احجز الآن"
+    },
+    "ShopType": {
+        "ViewAllCategories": "عرض جميع الفئات"
+    },
+    "Business": {
+        "QuickDelivery": "توصيل سريع",
+        "DeliveryGuaranteed": "التسليم في غضون دقائق مضمونة",
+        "SecurePayment": "دفع امن",
+        "SafeAndSecure": "طرق دفع آمنة ومضمونة",
+        "Best Quality": "أفضل جودة",
+        "BestQualityDelivered": "نحن نضمن تسليم أفضل المنتجات ذات الجودة",
+        "ReturnGuarantee": "ضمان الإرجاع",
+        "EasyReturnOptions": "خيارات إرجاع سهلة ومنهجية"
+    },
+    "FeaturedVendors": {
+        "FeaturedVendors": "الباعة المميزون"
+    },
+    "FlashSale": {
+        "FlashSale": "بيع مفاجئ",
+        "SaleLive": "البيع ساري المفعول",
+        "Day": "يوم",
+        "Hrs": "ساعات",
+        "Min": "الدقائق",
+        "S": "س"
+    },
+    "LogoSlider": {
+        "RecentViews": "المشاهدات الأخيرة الخاصة بك"
+    },
+    "ShopTypes": {
+        "InstantDelivery": "التسليم الفوري عند عتبة بابك",
+        "MustOrdered": "النموذج الأكثر طلبًا حول منطقتك",
+        "ViewMore": "عرض المزيد",
+        "LoadMore": "تحميل المزيد"
+    },
+    "SlidingItems": {
+        "TopSellers": "الأكثر مبيعًا هذا الأسبوع",
+        "ViewMore": "عرض المزيد"
+    },
+    "StaticContent": {
+        "PaymentSecured": "100٪ دفعة مضمونة",
+        "Payments": "دعم الكثير من المدفوعات",
+        "Support": "دعم 24 ساعة / 7 أيام",
+        "FreePrice": "توصيل مجاني بقيمة 25 ريال قطري",
+        "BestPrice": "أفضل سعر مضمون",
+        "Mobile": "تطبيقات الهاتف المحمول جاهزة",
+        "FreeDelivery": "توصيل مجاني بقيمة 25 ريال قطري"
+    },
+    "GetTouch": {
+        "GetInTouch": "ابقى على تواصل",
+        "SupportChannels": "مع قنوات الدعم لدينا",
+        "WhatsApp": "ال WhatsApp",
+        "Telephone": "هاتف",
+        "Email": "البريد الإلكتروني"
+    },
+    "TopPicks": {
+        "TopOffers": "أفضل العروض لك",
+        "MostOffered": "الأكثر طلبًا من جميع أنحاء منطقتك"
+    },
+    "BestSellers": {
+        "BestSellers": "أفضل البائعين",
+        "Products": "منتجات",
+        "NoShopsFound": "لم يتم العثور على متاجر!"
+    },
+    "ListCart": {
+        "MyCart": "عربة التسوق الخاصة بي",
+        "YourCartIsEmpty": "عربة التسوق فارغة!",
+        "CheckOut": "الدفع",
+        "Pc": "قطعة",
+        "OrderSummary": "ملخص الطلب",
+        "NoOfItems": "عدد العناصر:",
+        "Total": "المجموع",
+        "SubTotal":"المجموع الفرعي:",
+        "DeliveryFee": "رسوم التوصيل :",
+        "GrandTotal":"المبلغ الإجمالي :",
+        "Free": "حر"
+    },
+    "ShopDetails": {
+        "WithIn": "داخل",
+        "Delivery": "توصيل",
+        "Free": "حر"
+    },
+    "Category": {
+        "Categories": "فئات",
+        "BrowseProduct": "تصفح المنتج حسب الفئات",
+        "NoCategoriesFound": "لا توجد فئات!"
+    },
+    "CategoryList": {
+        "AllCategories": "جميع الفئات",
+        "NoCategoriesFound": "لا توجد فئات!"
+    },
+    "OrdersPage": {
+        "MyOrders": "طلباتي",
+        "NoOrdersFound": "لم يتم العثور على أية طلبات!",
+        "NoItemsFound": "لم يتم العثور على العناصر!"
+    },
+    "Profile": {
+        "MyProfile": "ملفي",
+        "Name": "اسم:",
+        "Email": "بريد الالكتروني:",
+        "ValidEmail": "يجب أن يكون البريد الإلكتروني عنوان بريد إلكتروني صالحًا",
+        "Edit": "يحرر",
+        "Cancel": "إلغاء",
+        "Save": "يحفظ",
+        "Address": "عنوان",
+        "Orders": "الطلب #٪ s",
+        "Rewards": "المكافآت"
+    },
+    "ProfileAddress": {
+        "ManageAddress": "إدارة العنوان",
+        "SelectAddress": "اختر عنوانًا",
+        "Edit": "يحرر",
+        "Delete": "حذف"
+    },
+    "ProfileOrder": {
+        "PastOrders": "الطلبات السابقة",
+        "NoPastOrders": "لا توجد أوامر سابقة",
+        "ViewDetails": "عرض التفاصيل",
+        "Items": "العناصر",
+        "TotalAmount": "المبلغ الإجمالي"
+    },
+    "ProfileRewards": {
+        "BalanceAvailable": "الرصيد متاح",
+        "YourTransactions": "معاملاتك",
+        "NoTransactions": "لا يوجد تحويلات"
+    },
+    "NewArrivals": {
+        "NewArrivals": "القادمون الجدد",
+        "WithIn": "داخل",
+        "Delivery": "توصيل",
+        "Free": "حر",
+        "ViewMoreItems": "عرض المزيد من العناصر",
+        "NoNewArrivalsFound": "لم يتم العثور على الوافدين الجدد!"
+    },
+    "Notifications": {
+        "Notifications": "إشعارات",
+        "ClearAll": "امسح الكل",
+        "OrderStatus": "حالة الطلب",
+        "Name": "اسم",
+        "Only": "فقط",
+        "More": "أكثر",
+        "Items": "العناصر",
+        "NoNotifications": "لا إشعارات"
+    },
+    "Offers": {
+        "TopOffersForYou": "أفضل العروض لك!",
+        "WithIn": "داخل",
+        "Delivery": "توصيل",
+        "Free": "حر",
+        "ExploreShop": "استكشف المتجر",
+        "NoOffersFound": "لا توجد عروض!"
+    },
+    "OrderDetails": {
+        "OrderDetails": "تفاصيل الطلب",
+        "OrderId": "رقم التعريف الخاص بالطلب",
+        "ShopName": "اسم المحل",
+        "OrderStatus": "حالة الطلب",
+        "Items": "العناصر",
+        "Ordered": "أمر",
+        "Packed": "معباه",
+        "Shipped": "شحنها",
+        "Delivered": "تم التوصيل",
+        "Cancelled": "ألغيت",
+        "Returned": "عاد",
+        "Cancel": "يلغي",
+        "TrackOrderHere": "يمكنك تتبع هذا الطلب هنا",
+        "TrackOrder": "ترتيب المسار",
+        "DeliveryAddress": "عنوان التسليم",
+        "Zone": "رقم المنطقة",
+        "Building": "رقم المبنى",
+        "Street": "رقم الشارع",
+        "House": "رقم الدار",
+        "Address": "عنوان",
+        "Landmark": "معلم معروف",
+        "Mobile": "رقم الهاتف المحمول",
+        "PaymentType": "نوع الدفع",
+        "PriceDetails": "تفاصيل السعر",
+        "SubTotal": "المجموع الفرعي",
+        "Discount": "خصم",
+        "RewardsRedeemed": "المكافآت المستبدلة",
+        "DeliveryCharge": "رسوم التوصيل",
+        "Free": "حر",
+        "TotalAmount": "المبلغ الإجمالي",
+        "OrderTracking": "تتبع الطلب",
+        "BillTotal": "إجمالي الفاتورة",
+        "OrderIsReady": "الطلب جاهز للتسليم",
+        "PreparingOrder": "تستعد لطلبك",
+        "OnTheWayToLocation": "في الطريق إلى موقعك لتوصيل طلبك",
+        "TripStart": "الرحلة لم تبدأ بعد",
+        "DeliveryIn": "التسليم في"
+    },
+    "OrderSuccess": {
+        "OrderSuccessfully": "تم تقديم الطلب بنجاح",
+        "YourOrderId": "معرف الطلب الخاص بك",
+        "ReceiveConfirmation": "ستتلقى تأكيدًا عبر الرسائل القصيرة قريبًا إلى",
+        "OrderTotal": "الطلب الكلي",
+        "PaymentMethod": "طريقة الدفع او السداد",
+        "MyAccount": "حسابي",
+        "ContinueShopping": "مواصلة التسوق"
+    },
+    "ProductCard": {
+        "AddToCart": "أضف إلى السلة",
+        "BookNow": "احجز الآن",
+        "Customisable": "قابل للتخصيص",
+        "AddOn": "الإضافات",
+        "Total": "المجموع",
+        "RepeatCustomization": "كرر التخصيص المستخدم الأخير؟",
+        "PreviousCustomization": "التخصيص السابق الخاص بك",
+        "Small": "صغير",
+        "IWillChoose": "سوف اختار",
+        "Repeat": "كرر"
+    },
+    "SubCategory": {
+        "SubCategory": "تصنيف فرعي"
+    },
+    "Product": {
+        "SortBy": "صنف حسب",
+        "ChooseAnOption": "إختر خيار",
+        "Discount": "خصم",
+        "PriceLowestToHighest": "السعر (الأقل أولاً)",
+        "PriceHighestToLowest": "السعر (الأعلى أولاً)",
+        "Newest": "الأحدث",
+        "Brand": "ماركة",
+        "ProductType": "نوع المنتج",
+        "ChooseAType": "اختر النوع",
+        "Veg": "نباتي",
+        "NonVeg": "غير نباتي",
+        "Others": "آحرون",
+        "Filter": "منقي",
+        "NoItemsFound": "لم يتم العثور على العناصر!",
+        "LoadMore": "تحميل المزيد"
+    },
+    "Questionnaire": {
+        "GoToCart": "اذهب إلى عربة التسوق",
+        "NoItemsFound": "لم يتم العثور على العناصر!",
+        "ServiceCharge": "تكلفة الخدمة",
+        "Frequency": "تكرر",
+        "ServiceDetails": "تفاصيل الخدمة",
+        "SpecialInstructions": "هل لديك أي تعليمات خاصة؟",
+        "Total": "المجموع",
+        "Submit": "يقدم"
+    },
+    "SearchPage": {
+        "Products": "منتجات",
+        "SearchForItems": "ابحث عن العناصر"
+    },
+    "SellerOtpForm": {
+        "EnterPhoneNumber": "أدخل رقم هاتفك",
+        "NumberToContinue": "الرجاء إدخال رقم هاتفك للمتابعة",
+        "PhoneNoRequired": "رقم الهاتف مطلوب!",
+        "ValidPhoneNumber": "يرجى إدخال رقم هاتف صالح!",
+        "OtpRequired": "رقم OTP مطلوب!",
+        "SendOtp": "أرسل OTP",
+        "VerifyOtp": "تحقق من OTP"
+    },
+    "SellerRegisterForm":{
+        "RegisterShop": "سجل متجرك",
+        "PersonalInfo": "معلومات شخصية",
+        "SalesExecutive": "اسم مسؤول المبيعات",
+        "NameRequired": "الاسم مطلوب",
+        "PhoneNumber": "رقم التليفون",
+        "ShopName":"اسم المحل",
+        "ShopNameRequired": "اسم المحل مطلوب",
+        "ShopType": "نوع المحل",
+        "SelectShopType": "حدد نوع المتجر",
+        "ShopTypeRequired": "نوع المحل مطلوب",
+        "RightLocation": "هل الدبوس في المكان الصحيح؟",
+        "ClickDrag": "انقر واسحب الدبوس إلى المكان المحدد.",
+        "Clear": "صافي",
+        "RegisterYourShop": "سجل متجرك"
+    },
+    "ShopSuccess": {
+        "AccountCreated": "تم إنشاء حسابك بنجاح",
+        "VerifyDetails": "سيتحقق فريقنا من التفاصيل الخاصة بك قريبًا",
+        "AccountActivated": "سيتم تفعيل حسابك في غضون 48 ساعة القادمة",
+        "BackToHom": "العودة إلى المنزل"
+    },
+    "ShopCategory": {
+        "WithIn": "داخل",
+        "Delivery": "توصيل",
+        "Free": "حر",
+        "NoShopsFound": "لم يتم العثور على متاجر!",
+        "LoadMore": "تحميل المزيد"
+    },
+    "Shops": {
+        "TopOffersForYou": "أفضل العروض لك",
+        "MostOrdered": "الأكثر طلبًا من جميع أنحاء منطقتك"
+    },
+    "TopProducts": {
+        "TopProducts": "أهم المنتجات",
+        "WithIn": "داخل",
+        "Delivery": "توصيل",
+        "Free": "حر",
+        "ViewMoreItems":"عرض المزيد من العناصر",
+        "NoProductsFound": "لا توجد منتجات!"
+    },
+    "TopSellers": {
+        "TopSellers": "الأكثر مبيعا هذا الأسبوع",
+        "Products": "منتجات",
+        "NoShopsFound": "لم يتم العثور على متاجر!"
+    },
+    "Wishlist": {
+        "Favorites": "المفضلة",
+        "NoItemsFound": "لم يتم العثور على العناصر!"
+    },
+    "AddLocation": {
+        "DontServe": "آسف! نحن لا نخدم في موقعك حاليا.",
+        "SelectLocation":"اختر موقعا",
+        "SavedAddress": "العناوين المحفوظة"
+    },
+    "CheckOut": {
+        "YourCartIsEmpty":"عربة التسوق فارغة!",
+        "HomePageToViewMore": "يمكنك الذهاب إلى الصفحة الرئيسية لعرض المزيد من المحلات التجارية",
+        "SeeShopsNearYou": "انظر المحلات التجارية القريبة منك",
+        "LogIn": "تسجيل دخول",
+        "Checkout": "الدفع",
+        "PlaceOrder": "مكان الامر"
+    },
+    "CheckOutCart": {
+        "OrderSummary": "ملخص الطلب",
+        "SubTotal": "المجموع الفرعي",
+        "PromoDiscount": "الخصم الترويجي",
+        "Rewards": "المكافآت",
+        "DeliveryCharges": "رسوم التوصيل",
+        "GrandTotal": "المبلغ الإجمالي",
+        "RedeemCoupon": "استرداد قسيمتك",
+        "ApplyCoupon": "تطبيق القسيمة",
+        "Remove": "إزالة",
+        "YouWillGet": "ستحصل",
+        "OffThisOrder": "على هذا الطلب",
+        "OffThisOrderUpTo": "على هذا الطلب تصل",
+        "ApplicableForOrders": "ينطبق على الطلبات أعلاه",
+        "AvailableBalance": "الرصيد المتوفر",
+        "UseYourRewardsPoint": "استخدم نقطة المكافآت الخاصة بك",
+        "CouponCode": "رمز الكوبون",
+        "Free": "حر"
+    },
+    "PaymentOptions": {
+        "ChoosePayment": "اختر الدفع",
+        "PaymentType": "نوع الدفع",
+        "CardOnDelivery": "البطاقة عند التسليم",
+        "Card": "بطاقة",
+        "CashOnDelivery": "الدفع عند الاستلام",
+        "Cash": "نقدي",
+        "PayOnline": "ادفع عبر الإنترنت",
+        "OnlinePayment": "يُوصى بالدفع عبر الإنترنت لتقليل الاتصال بينك وبين شريك التوصيل الخاص بك"
+    },
+    "DeliveryAddress": {
+        "DeliveryAddress": "عنوان التسليم",
+        "Change": "يتغيرون",
+        "SelectDeliveryAddress": "حدد عنوان التسليم",
+        "NoDeliverableAddress": "لا يوجد عنوان قابل للتسليم في هذا الموقع. الرجاء إضافة عنوان جديد.",
+        "AddNewAddress": "أضف عنوان جديد",
+        "DeliveryAvailable": "التسليم متاح",
+        "NotDeliverable": "غير قابل للتسليم",
+        "DeliverHere": "التسليم هنا",
+        "AddNew": "اضف جديد"
+    },
+    "AddNewAddress": {
+        "SaveDeliveryAddress": "حفظ عنوان التسليم",
+        "Name": "اسم",
+        "NameRequired":"الاسم مطلوب",
+        "ZoneNo": "رقم المنطقة",
+        "ZoneNumberRequired": "رقم المنطقة مطلوب",
+        "BuildingNo": "رقم المبنى",
+        "BuildingNumberRequired": "رقم المبنى مطلوب",
+        "StreetNo": "رقم الشارع",
+        "StreetNumberRequired": "رقم الشارع مطلوب",
+        "DoorNo": "رقم الباب / اسم المبنى",
+        "DoorNumberRequired": "رقم الباب / اسم المبنى مطلوب",
+        "Landmark": "معلم معروف",
+        "LandmarkRequired": "مطلوب معلم",
+        "Phone": "هاتف",
+        "PhoneNumberRequired": "رقم الهاتف مطلوب",
+        "ValidPhoneNumber":"يرجى إدخال رقم هاتف صالح!",
+        "Home": "الصفحة الرئيسية",
+        "Work": "الشغل",
+        "Other": "آخر",
+        "SaveAddress": "حفظ العنوان",
+        "Proceed": "تقدم"
+    },
+    "EditAddress": {
+        "EditAddress": "تعديل العنوان",
+        "SaveChanges": "حفظ التغييرات"
+    }
+
+}
