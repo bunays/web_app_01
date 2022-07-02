@@ -82,10 +82,10 @@ export class ProductDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe(
-      (params) => {
-        (this.strProductId = params.id)
-      });
+    // this.activatedRoute.queryParams.subscribe(
+    //   (params) => {
+    //     (this.strProductId = params.id)
+    //   });
 
     let Cart: any = JSON.parse(localStorage.getItem("SMCart"));
     if (Cart && Cart.length) {
@@ -94,12 +94,14 @@ export class ProductDetailsComponent implements OnInit {
       this.arrCart = []
     }
 
-
-    //this.findItemCount();
     this.intCartItemCount = this.arrCart.length;
-    this.calculateCartTotal();
-    this.getProductDetails();
-    this.getAllBottomBannerImages();
+
+
+    // //this.findItemCount();
+    // this.intCartItemCount = this.arrCart.length;
+    // this.calculateCartTotal();
+    // this.getProductDetails();
+    // this.getAllBottomBannerImages();
   }
 
   openVerticallyCentered(content) {

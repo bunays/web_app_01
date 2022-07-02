@@ -14,7 +14,7 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ScanComponent } from './scan/scan.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
-
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 
@@ -27,7 +27,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomePageComponent,
+    component: UserDetailsComponent,
   },
   {
     path: 'best-deals',
@@ -76,6 +76,10 @@ const routes: Routes = [
   {
     path: 'scan',
     component: ScanComponent,
+  },
+  {
+    path: 'user-details',
+    component: UserDetailsComponent,
   },
 
 

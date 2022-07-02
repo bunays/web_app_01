@@ -48,7 +48,8 @@ import { BestDealsComponent } from './best-deals/best-deals.component';
 import { BestDealsSubComponent } from './best-deals/best-deals-sub/best-deals-sub.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { ListViewComponent } from './user-details/list-view/list-view.component';
 // import { WebcamModule } from 'ngx-webcam';
 
 
@@ -82,7 +83,9 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     BestDealsComponent,
     BestDealsSubComponent,
     TermsConditionsComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    UserDetailsComponent,
+    ListViewComponent
   ],
 
   entryComponents: [

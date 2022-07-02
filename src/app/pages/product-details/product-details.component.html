@@ -49,277 +49,14 @@
                 <div class="product-details" style="left: 0px; right: auto; transform: translate(0%, 0px);">
 
                     <div class="app-body single-item p-0 mt-50">
-                        <!-- <a routerLink="/home" class="close-det" data-dismiss="modal">
-                            <i class="ti-arrow-left"></i>
-                            back
-                        </a> -->
-                        <div class="px-3" *ngIf="searchResult">
-                            <app-search-products *ngIf="arrProducts.length" [products]="arrProducts">
-                            </app-search-products>
-
-                            <div class="text-center no-item" *ngIf="!arrProducts.length">
-                                <i class="ti-face-sad"></i>
-                                <br>
-                                No Item Found
-                                <br>With This Specification !
-                            </div>
-
-                        </div>
-
-                        <div class="tijara-det-slide" *ngIf="!searchResult">
-                            <ngx-slick-carousel class="no-arrow" #slickModal="slick-carousel"
-                                [config]="bannerSlideConfig">
-                                <div ngxSlickItem class="text-center gradient"
-                                    *ngFor="let bannerImg of objProductDetails">
-                                    <div class="sliding-logo-block pointer text-center">
-                                        <a>
-                                            <img class="mx-auto slideImg"
-                                                [src]="bannerImg?.arrayOtherImages[0]?.imageUrl"
-                                                (error)="errorImage($event)">
-                                            <div class="bg-price price" *ngIf="objProductDetails[0]?.intDiscount">
-                                                <!-- AED -->
-                                                <span>
-                                                    <i class="fa fa-tag"></i>
-                                                    {{objProductDetails[0]?.intDiscount.toFixed(2)}}% off
-                                                </span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </ngx-slick-carousel>
-                        </div>
+                    
+               
                     </div>
-                    <div class="app-body single-item pr-4 pl-4 pt-0" *ngIf="!searchResult">
-                        <div class="row">
-                            <div class="col-sm-12 mb-0 content-div text-center">
-                                <span class="tag"> {{objProductDetails[0]?.strCategoryName}}</span>
-                                <h4 class="item-title ">
-                                    {{objProductDetails[0]?.strProductName}}
-                                </h4>
-                                <h5 class="item-price">
-
-                                </h5>
-                                <!-- <a href="https://api.whatsapp.com/send?phone=918589049648"
-                                    class="btn btn-round btn-success mr-1 mb-0 mt-1">
-                                    <i class="f18 text-white fa fa-whatsapp mr-1"></i>
-                                    WhatsApp Enquiry
-                                </a> -->
-
-                                <hr>
-                                &nbsp;
-
-                                <div style="margin-top : 10px;"
-                                    *ngIf="objProductDetails[0]?.blnPriceVariation && (objProductDetails[0]?.blnPriceVariation == 'true' || objProductDetails[0]?.blnPriceVariation == true)">
-
-                                    <div class="product var-det text-left" style="margin-top: 10px;"
-                                        *ngFor="let item of objProductDetails[0]?.arrayAddOnPriceDetails; let j = index;">
-
-                                        <span class="var-det-name ">
-                                            <span>{{item?.size}}</span>
-                                        </span>
-                                        <span class="mt-2">
-
-                                            <span class=" var-det-price ml-2">AED
-                                                {{(objProductDetails[0]?.intSellingPrice +
-                                                item?.price).toFixed(2)}}
-                                            </span>
-                                            <del
-                                                *ngIf="objProductDetails[0]?.intMRP > objProductDetails[0]?.intSellingPrice">
-                                                <span class="var-det-price-red">AED
-                                                    {{(objProductDetails[0]?.intMRP +
-                                                    item?.price).toFixed(2)}}
-                                                </span>
-                                            </del>
-                                            <!-- <span class="product-quantity" *ngIf="objVariationItemCount[item?.size]">
-                                                Qty : {{objVariationItemCount[item?.size]}}
-                                            </span> -->
-                                        </span>
-                                        <span
-                                            *ngIf="(objProductDetails[0]?.blnStockAvailability ==  false || objProductDetails[0]?.blnStockAvailability == 'false')"
-                                            class=" pull-right var-cart tiny bId27 btn  btn-outline-danger mr-1 mb-0">
-                                            <i class=" ti-face-sad mr-1"></i>
-                                            N / A
-                                        </span>
-
-                                        <!-- <span class="product-quantity" *ngIf="objVariationItemCount[item?.size]">
-                                            Qty : {{objVariationItemCount[item?.size]}}
-                                        </span> -->
-
-
-                                        <button
-                                            *ngIf="(objProductDetails[0]?.blnStockAvailability ==  true || objProductDetails[0]?.blnStockAvailability == 'true') && !objVariationItemCount[item?.size]"
-                                            class="add-to-cart pull-right var-cart tiny bId27 btn btn-success mr-1 mb-0"
-                                            (click)="addToCartFn(item?.price, item?.size)">
-                                            <i class="text-white ti-plus mr-1"></i>
-                                            Add
-                                        </button>
-
-                                        <div class=" text-center mt-2" *ngIf="objVariationItemCount[item?.size]">
-                                            <div class="quantity-numbers text-center">
-                                                <div class="p-1 align-content:center pointer">
-                                                    <i class="ti-minus"
-                                                        (click)="decrementCartFn(item?.price, item?.size)"
-                                                        style="size: 75%; border: 2px solid; border-radius: 5px; color:#f05d5d ; font-size: 20px;"></i>
-                                                </div>
-                                                <div class="px-1 align-content:center">
-                                                    <span class="float-right"
-                                                        style="color: #71103b; font-size: 20px;">{{objVariationItemCount[item?.size]}}</span>
-                                                </div>
-                                                <div class="p-1 align-content:center pointer">
-                                                    <i class="ti-plus" (click)="addToCartFn(item?.price, item?.size)"
-                                                        style="border: 2px solid; border-radius: 5px; color: #08cf08; font-size: 20px;"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div style="margin-top: 10px;"
-                                    *ngIf="(!objProductDetails[0]?.blnPriceVariation || (objProductDetails[0]?.blnPriceVariation && (objProductDetails[0]?.blnPriceVariation ==  false || objProductDetails[0]?.blnPriceVariation == 'false')))">
-
-                                    <div class="product var-det" style="margin-top : 10px;">
-
-                                        <span class="mt-2">
-
-                                            <span class=" var-det-price ml-2">AED
-                                                {{objProductDetails[0]?.intSellingPrice.toFixed(2)}}
-                                            </span>
-                                            <del
-                                                *ngIf="objProductDetails[0]?.intMRP > objProductDetails[0]?.intSellingPrice">
-                                                <span class="var-det-price-red">AED
-                                                    {{objProductDetails[0]?.intMRP.toFixed(2)}}
-                                                </span>
-                                            </del>
-                                            <!-- <span class="product-quantity" *ngIf="intItemCount">
-                                                Qty : {{intItemCount}}
-                                            </span> -->
-                                        </span>
-                                        <span
-                                            *ngIf="(objProductDetails[0]?.blnStockAvailability ==  false || objProductDetails[0]?.blnStockAvailability == 'false')"
-                                            class=" pull-right var-cart tiny bId27 btn  btn-outline-danger mr-1 mb-0">
-                                            <i class=" ti-face-sad mr-1"></i>
-                                            N / A
-                                        </span>
-
-                                        <!-- <span class="product-quantity" *ngIf="intItemCount">
-                                            Qty : {{intItemCount}}
-                                        </span> -->
-
-                                        <button
-                                            *ngIf="(objProductDetails[0]?.blnStockAvailability ==  true || objProductDetails[0]?.blnStockAvailability == 'true') && !intItemCount"
-                                            class="add-to-cart pull-right var-cart tiny bId27 btn  btn-success mr-1 mb-0"
-                                            (click)="addToCartFn(0, '')">
-                                            <i class="text-white ti-plus mr-1"></i>
-                                            Add
-                                        </button>
-
-                                        <div class=" text-center mt-2" *ngIf="intItemCount">
-                                            <div class="quantity-numbers text-center">
-                                                <div class="p-1 align-content:center pointer">
-                                                    <i class="ti-minus" (click)="decrementCartFn(0, '')"
-                                                        style="size: 75%; border: 2px solid; border-radius: 5px; color:#f05d5d ; font-size: 20px;"></i>
-                                                </div>
-                                                <div class="px-1 align-content:center">
-                                                    <span class="float-right"
-                                                        style="color: #71103b; font-size: 20px;">{{intItemCount}}</span>
-                                                </div>
-                                                <div class="p-1 align-content:center pointer">
-                                                    <i class="ti-plus" (click)="addToCartFn(0, '')"
-                                                        style="border: 2px solid; border-radius: 5px; color: #08cf08; font-size: 20px;"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12 mt-2 content-div ">
-                                <span class="item-subtitle desc-title mb-2 mt-2 fw-600 ">
-                                    Description </span>
-                                <div class="clearfix"></div>
-                                <div class=" ">
-                                    <p class="">
-                                        {{objProductDetails[0]?.strDescription}}
-                                    </p>
-                                </div>
-                                <!-- <hr>
-                    <span class="item-subtitle mb-3 mt-2 fw-600">Related Products</span>
-
-                    <a href="#" class="bg-red-gradiant fw-600 mt-2 next-tour btn btn-lg text-center w-100 text-white"><i class="ti-shopping-cart mr-2"></i>Add to order</a> -->
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="static-content">
-                        <!-- <div class="one">
-                            <img src="assets/images/non_toxic.png" class="pr-1" width="50" height="50" alt="">
-                            <p class="">Chemical Free</p>
-                        </div>
-                        <div class="two">
-                            <img src="assets/images/fresh.png" class="pr-1" width="50" height="50" alt="">
-                            <p class="">Fresh</p>
-                        </div>
-                        <div class="three">
-                            <img src="assets/images/hygiene.png" class="pr-1" width="50" height="50" alt="">
-                            <p class="">Hygiene</p>
-                        </div> -->
-                        <img src="assets/images/logos jpg.jpg" alt="">
-                    </div>
+          
                 </div>
 
             </div>
-            <nav class="navigation style7 style1" *ngIf="!searchResult">
-                <div class="modal-bottom fixed-bottom cart-det ">
-                    <div class="modal-footer-1">
-                        <a class="shopping-cart cart-count mt-1 nav-content-bttn nav-center showDetCartInfo"
-                            (click)="onClickNavigateCart()">
-                            <i class="ti-shopping-cart-full cart-b"></i>
-                            <!-- <span id="detCartStat">
-                        5
-                    </span> -->
-                            <!-- <span class="badge rounded-pill badge-cart" *ngIf="intCartItemCount > 0">{{ intCartItemCount }}
-                        </span> -->
-                        </a>
-                        <a class="cart-item-count" *ngIf="intCartItemCount > 0">
-                            <div class="text-white">
-                                {{ intCartItemCount }} <span class="item-word" *ngIf="intCartItemCount > 1">items</span>
-                                <span class="item-word" *ngIf="intCartItemCount == 1">item</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="modal-footer-2">
-                        <a class="showDetCartInfo" (click)="onClickNavigateCart()">
-
-                            <div class="text-white">
-                                <!-- &nbsp; &nbsp; -->
-                                <!-- <i class="ti-direction"></i> -->
-                                &nbsp; &nbsp;
-                                <span class="total-cart">Cart Total</span> :
-                                AED
-                                <span class="detCartTotal">
-                                    {{intSubTotal.toFixed(2)}}
-                                </span>
-                                &nbsp; &nbsp;
-                            </div>
-
-                        </a>
-                    </div>
-
-                    <div class="modal-footer-3">
-                        <a class="view-cart" (click)="onClickNavigateCart()">
-                            <div class="text-white">
-                                view cart &nbsp; <i class="ti-angle-right angle-right"></i>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </nav>
+      
         </div>
 
     </div>
@@ -361,18 +98,18 @@
                         </li>
 
                         <!-- <li>
-                        <a href="best" class=" spl_link_menu">
-                            <i class="ti-face-smile"></i>
-                            Popular
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="special" class=" spl_link_menu">
-                            <i class="ti-star"></i>
-                            Featured
-                        </a>
-                    </li> -->
+                            <a href="best" class=" spl_link_menu">
+                                <i class="ti-face-smile"></i>
+                                Popular
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="special" class=" spl_link_menu">
+                                <i class="ti-star"></i>
+                                Featured
+                            </a>
+                        </li> -->
 
                         <li>
                             <a routerLink="/categories" class="allCat">
@@ -439,14 +176,6 @@
                             </a>
                         </li>
 
-
-
-                        <!-- <li>
-                            <a href="#">
-                                <i class="ti-info-alt"></i>
-                                The Retro Online
-                            </a>
-                        </li> -->
 
                     </ul>
                 </div>

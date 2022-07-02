@@ -4,7 +4,7 @@
             <div class="main-wrapper">
                 <div class="main-content">
                     <!-- <app-navbar></app-navbar> -->
-                    <header class="header-main bg-white style2 pt-2 bg-home">
+                    <!-- <header class="header-main bg-white style2 pt-2 bg-home">
                         <div class="row">
                             <div class="col-sm-4 text-left pos-top" (click)="drawer.open()">
                                 <a class="menu-btn-top mt-0" id="sidebar-right"
@@ -20,54 +20,78 @@
                                 </a>
                             </div>
                             <div class="col-sm-12 text-left pos-top">
-                                <!-- <h2 class="titleText  mt-0 mb-0 ">
-                                Discover Your Taste </h2> -->
                             </div>
                        
                         </div>
-                    </header>
-
+                    </header> -->
 
                     <div class="app-body bg-danish">
-                        <!-- <app-item-carousel *ngIf="!searchResult"></app-item-carousel> -->
-                        <div class="row">
-                            <div class="col-sm-12 mb-2" *ngIf="!searchResult">
-                                <app-top-banner></app-top-banner>
-                            </div>
-                            <div class="col-sm-12 text-left mt-1 mb-2 pos-top">
-                                <div class="form-content style1">
-
-                                    <input type="text" id="menu_search" class="form-control bg-white"
-                                        placeholder=" Customer Search..." [(ngModel)]="searchString" onfocus="value=''" value=""
-                                        #searchTags />
-
-                                </div>
-                             
-                            </div>
-                            <div class="col-sm-12">
-                                <app-main-list *ngIf="!searchResult"></app-main-list>
-                                <div class="px-3" *ngIf="searchResult">
-                                    <!-- <app-search-products *ngIf="arrProducts.length" [products]="arrProducts"> -->
-                                    <!-- </app-search-products> -->
-
-                                    <div class="text-center no-item" *ngIf="!arrProducts.length">
-                                        <i class="ti-face-sad"></i>
-                                        <br>
-                                        No Item Found
-                                        <br>With This Specification !
+                        <div class="container profile-page">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card profile-header">
+                                        <div class="body">
+                                            <div class="row">
+                                                <div class="col-4 ">
+                                                    <div class="profile-image float-md-right"> 
+                                                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt=""> 
+                                                    </div>
+                                                </div>
+                                                <div class="col-8" >
+                                                    <div >
+                                                        <h4 class="m-t-0 m-b-0"><strong>Michael</strong> Deo</h4>
+                                                        <span class="job_post">Date: 11-02-2022</span><br>
+                                                        <span class="job_post">Badget: 20011</span><br>
+                                                        <span class="job_post">Client Amount: 600241</span>
+                                                    </div>
+                                                 
+                                                    <!-- <span class="job_post">Ui UX Designer</span>
+                                                    <span class="job_post">Ui UX Designer</span> -->
+                                                    <div>
+                                                        <button class="btn btn-primary btn-round">Follow</button>
+                                                        <button class="btn btn-primary btn-round btn-simple">Message</button>
+                                                    </div>
+                                                    <!-- <p class="social-icon m-t-5 m-b-0">
+                                                        <a title="Twitter" href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+                                                        <a title="Facebook" href="javascript:void(0);"><i class="fa fa-facebook"></i></a>
+                                                        <a title="Google-plus" href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+                                                        <a title="Behance" href="javascript:void(0);"><i class="fa fa-behance"></i></a>
+                                                        <a title="Instagram" href="javascript:void(0);"><i class="fa fa-instagram "></i></a>
+                                                    </p> -->
+                                                </div>                
+                                            </div>
+                                        </div>                    
                                     </div>
-
                                 </div>
-
-                                <!-- <app-categories></app-categories> -->
-                                <!-- <app-sub-categories></app-sub-categories> -->
-                                <!-- <app-product-details></app-product-details> -->
-                                <!-- <app-checkout></app-checkout> -->
-                                <!-- <app-feedback></app-feedback> -->
                             </div>
+                            <!-- <div class="row">
+                                <div class="col-12">
+                                  <div class="card">
+                                    <div class="card-content">
+                                      <div class="card-body cleartfix">
+                                        <div class="media align-items-stretch">
+                                          <div class="align-self-center">
+                                            <h1 class="mr-2">$76,456.00</h1>
+                                          </div>
+                                          <div class="media-body">
+                                            <h4>Total Transaction Amount</h4>
+                                          </div>
+                                          <div class="align-self-center">
+                                            <i class="icon-heart danger font-large-2"></i>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            
+                             
+                              </div> -->
+                                
+                            <app-list-view></app-list-view>
                         </div>
-
                     </div>
+                 
                 </div>
                 <nav class="navigation style7 style1">
                     <div class="container pl-0 pr-0">
