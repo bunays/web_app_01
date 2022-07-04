@@ -27,7 +27,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: UserDetailsComponent,
+    component: HomePageComponent,
   },
   {
     path: 'best-deals',

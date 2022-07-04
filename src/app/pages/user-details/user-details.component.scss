@@ -992,23 +992,23 @@ a {
 .m-t-5{
     margin-top: 5px;   
 }
-// .card {
-//     background: #fff;
-//     margin-bottom: 30px;
-//     transition: .5s;
-//     border: 0;
-//     border-radius: .1875rem;
-//     display: inline-block;
-//     position: relative;
-//     width: 100%;
-//     box-shadow: none;
-// }
-// .card .body {
-//     font-size: 14px;
-//     color: #424242;
-//     padding: 20px;
-//     font-weight: 400;
-// }
+.card {
+    background: #fff;
+    margin-bottom: 30px;
+    transition: .5s;
+    border: 0;
+    border-radius: .1875rem;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+}
+.card .body {
+    font-size: 14px;
+    color: #424242;
+    padding: 20px;
+    font-weight: 400;
+}
 .profile-page .profile-header {
     position: relative
 }
@@ -1051,3 +1051,10 @@ a {
     padding: 15px 0;
     color: #424242
 }
+.f-right {
+    float: right;
+    color: #ffffff;
+    font-family: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
