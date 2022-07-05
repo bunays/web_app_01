@@ -141,10 +141,10 @@
   //   color: #fb3831;
   // }
   a.nav-content-bttn.active {
-    color: #fb3831;
+    color: #495274 ;
   }
   .main-wrapper .navigation.style7 .nav-content ul li > a.nav-center {
-    background-color: orange;
+    background-color: #495274 ;
     border-radius: 30px;
     position: relative;
     top: 0px;
@@ -203,12 +203,12 @@
   }
   .example-sidenav {
     width: 280px;
-    background-color: #fb3831;
+    background-color: #495274 ;
   }
   @media only screen and (max-width: 320px) {
     .example-sidenav {
       width: 240px;
-      background-color: #fb3831;
+      background-color: #495274 ;
     }
   }
   
@@ -323,18 +323,18 @@
     z-index: 100;
     
   }
-  #floating-button {
-    width: 55px;
-    height: 55px;
-    // border-radius: 5%;
-    background: #ff9100d7;
-    position: fixed;
-    bottom: 85px;
-    right: 30px;
-    cursor: pointer;
-    box-shadow: 0px 2px 5px #666;
-    border-radius: 50%;
-  }
+//   #floating-button {
+//     width: 55px;
+//     height: 55px;
+//     // border-radius: 5%;
+//     background: #ff9100d7;
+//     position: fixed;
+//     bottom: 85px;
+//     right: 30px;
+//     cursor: pointer;
+//     box-shadow: 0px 2px 5px #666;
+//     border-radius: 50%;
+//   }
   .plus {
     color: white;
     position: absolute;
@@ -428,7 +428,7 @@
   //navbar
   header.header-main {
     // background: #377d51 !important;
-    background: #fb3831 !important;
+    background: #495274 !important;
     /*  background: url(images/bg.jpg) no-repeat !important;*/
     margin: 0px;
     padding: 15px;
@@ -438,7 +438,7 @@
   }
   header {
     // background: #377d51 !important;
-    background: #fb3831 !important;
+    background: #495274 !important;
     /*  background: url(images/bg.jpg) no-repeat !important;*/
     margin: 0px;
     padding: 15px;
