@@ -15,7 +15,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ScanComponent } from './scan/scan.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
-
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 const routes: Routes = [
@@ -81,7 +81,11 @@ const routes: Routes = [
     path: 'user-details',
     component: UserDetailsComponent,
   },
-
+  {
+    path: 'user-profile',
+    component: UserProfileComponent,
+  },
+  
 
 
 ];

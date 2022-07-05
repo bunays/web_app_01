@@ -50,6 +50,7 @@ import { TermsConditionsComponent } from './terms-conditions/terms-conditions.co
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ListViewComponent } from './user-details/list-view/list-view.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 // import { WebcamModule } from 'ngx-webcam';
 
 
@@ -85,7 +86,8 @@ import { ListViewComponent } from './user-details/list-view/list-view.component'
     TermsConditionsComponent,
     PrivacyPolicyComponent,
     UserDetailsComponent,
-    ListViewComponent
+    ListViewComponent,
+    UserProfileComponent
   ],
 
   entryComponents: [
